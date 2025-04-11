@@ -1,4 +1,206 @@
-html {
-  height: 100%;
-  width: 100%;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        background-color: #f8f8f8;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .hero-section {
+        background-image: url('hero-background.png');
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        background-color: #ff6347;
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    section {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .menu-item {
+        display: inline-block;
+        margin: 1rem;
+    }
+
+    .menu-item img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .gallery-item {
+        display: inline-block;
+        margin: 1rem;
+    }
+
+    .gallery-item img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    footer {
+        background-color: #f1f1f1;
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero-section {
+        background-image: url('hero-background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #0e0a5a9;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section h1,
+    .hero-section p {
+        color: white;
+    }
+
+    #about,
+    #menu,
+    #gallery,
+    #contact {
+        padding: 2rem 0;
+    }
+
+    #about h2,
+    #menu h2,
+    #gallery h2,
+    #contact h2 {
+        margin-bottom: 1rem;
+    }
+
+    .menu-item,
+    .gallery-item {
+        margin-bottom: 2rem;
+    }
+
+    .menu-item img,
+    .gallery-item img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+
+.about {
+  background-color: #f9f9f9;
 }
+.menu {
+  background-color: #fff5e6;
+}
+.gallery {
+  background-color: #f3f3f3;
+}
+.contact {
+  background-color: #eef7ff;
+}.btn {
+        background-color: #ff6347;
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    footer {
+        background-color: #f1f1f1;
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .social-icons {
+
+        .button {
+          background-color: #0e5ba9;
+          color: white;
+          padding: 12px 24px;
+          border: none;
+          border-radius: 30px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.3s ease;
+        }
+
+        .button:hover {
+          background-color: #084f8c;
+        }display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
