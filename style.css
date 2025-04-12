@@ -1,4 +1,6 @@
-    body {
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap');
+body
+{
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
@@ -51,6 +53,41 @@
         margin-bottom: 2rem;
     }
 
+.book-now {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    b
+    .hero-content h1 {
+            font-family: 'Pacifico', cursive;
+        }
+    .hero-content h1 {
+        font-family: 'Pacifico', cursive !important;
+    }
+
+    .hero-content p {
+        font-family: 'Poppins', sans-serif !important;
+    }
+    .hero-content p {
+            font-family: 'Poppins', sans-serif;
+        }order: none;
+    border-radius: 5px;
+    f
+        .hero-section h1 {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .hero-section p {
+            font-family: 'Poppins', sans-serif;
+        }ont-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.book-now:hover {
+    background-color: #ff4500;
+}
     .btn {
         background-color: #ff6347;
         color: white;
@@ -102,8 +139,8 @@
     }
 
     .social-icons img {
-        width: 32px;
-        height: 32px;
+        width: 40
+            
     }
 
     .hero-section {
@@ -133,8 +170,14 @@
     }
 
     #about h2,
-    #menu h2,
-    #gallery h2,
+
+.footer {
+    background-image: url('logo-fade.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    opacity: 0.15;
+}    #gallery h2,
     #contact h2 {
         margin-bottom: 1rem;
     }
