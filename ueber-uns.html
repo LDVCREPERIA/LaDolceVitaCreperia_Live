@@ -2,50 +2,97 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Über uns – La Dolce Vita</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kugile&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Über uns – La Dolce Vita</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kugile&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            width: 100%;
+            max-height: 60vh;
+            object-fit: cover;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 3rem auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .about-text {
+            font-family: 'Kugile', 'Poppins', sans-serif;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .final-image {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: cover;
+            margin-top: 3rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .about-container {
+            background-color: #0e5ba9;
+            min-height: 100vh;
+            padding-bottom: 3rem;
+        }
+    </style>
 </head>
 <body>
-  <div class="nav-container">
-    <button class="hamburger-btn" onclick="toggleNav()">☰</button>
-    <nav class="nav-menu">
-      <button class="close-btn" onclick="toggleNav()">×</button>
-      <a href="index.html">Home</a>
-      <a href="ueber-uns.html">Über uns</a>
-      <a href="menu.html">Menü</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </div>
-
-  <div class="ueber-uns">
-    <h2>Über uns</h2>
-    <div class="about-content">
-      <p>La Dolce Vita ist ein Familienbetrieb, gegründet von Roberto Polimeno. Seine Leidenschaft ist es, Menschen ein Lächeln ins Gesicht zu zaubern – mit jedem Bissen.</p>
-      
-      <img src="file_0000000066ac5246bdfef7e15f0292ed_conversation_id=67f27ed9-4310-8007-9530-1ae64190bcfa&message_id=0feae0b5-0776-4c00-8333-364d634b2efd.jpg" alt="La Dolce Vita Stand" class="about-image">
-      
-      <p>Roberto verwendet ausschließlich natürliche Zutaten aus der Region. Die Teigmischung wird täglich frisch angerührt und jede Crêpe wird direkt vor Ihren Augen zubereitet.</p>
-      
-      <img src="attached_assets/20241107_200413.jpg" alt="Night Service" class="about-image">
-      
-      <p>Mit Liebe, Handwerkskunst und einem Rezept, das seit über 80 Jahren in seiner Familie weitergegeben wird. Die Rezeptur stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.</p>
-      
-      <img src="attached_assets/Roberto1.jpg" alt="Roberto Polimeno" class="about-image">
+    <div class="nav-container">
+        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <nav class="nav-menu">
+            <button class="close-btn" onclick="toggleNav()">×</button>
+            <a href="index.html">Home</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="menu.html">Menü</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
     </div>
-  </div>
 
-  <script>
-    function toggleNav() {
-      document.querySelector('.nav-menu').classList.toggle('active');
-    }
-    
-    window.onpageshow = function(event) {
-      if (event.persisted) {
-        document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
-      }
-    };
-  </script>
+    <div class="about-container">
+        <img src="20250405_145858.jpg" alt="La Dolce Vita Creperia Stand" class="about-hero">
+        
+        <div class="about-text">
+            Seit über 80 Jahren wird das Rezept von Generation zu Generation weitergegeben. Roberto führt diese Familientradition mit Liebe und Hingabe fort und bringt das authentische Crêpe-Erlebnis direkt zu Ihnen.
+        </div>
+
+        <img src="20250405_150525.jpg" alt="La Dolce Vita Crepe Preparation" class="about-image">
+        
+        <div class="about-text">
+            Egal ob Geburtstag, Hochzeit, Firmenevent oder Straßenfest – Roberto bringt das authentische Crêpe-Erlebnis direkt zu Ihnen.
+        </div>
+
+        <img src="attached_assets/Roberto1.jpg" alt="Roberto von La Dolce Vita Creperia" class="final-image">
+    </div>
+
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+        
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
+            }
+        };
+    </script>
 </body>
 </html>
