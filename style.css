@@ -35,9 +35,12 @@ body {
     }
 
     .hamburger-btn {
+        font-size: 24px;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
         background: none;
         border: none;
-        font-size: 24px;
         cursor: pointer;
         color: #FFD700;
         min-width: 28px;
@@ -62,15 +65,14 @@ body {
     }
 
     .nav-menu a {
-        font-size: clamp(16px, 2.5vw, 18px);
-        padding: 1rem 2rem;
-        margin: 0.5rem 0;
+        font-size: 16px;
+        padding: 12px;
+        font-family: Poppins, sans-serif;
+        color: #000000;
+        text-decoration: none;
+        display: block;
         width: 100%;
         text-align: center;
-        transition: all 0.3s ease;
-        font-family: 'Poppins', sans-serif !important;
-        color: #333;
-        text-decoration: none;
     }
 
     .nav-menu a:hover {
@@ -812,6 +814,7 @@ body {
 
 .ueber-hero {
     width: 100%;
+    height: auto;
     max-height: 400px;
     object-fit: cover;
     display: block;
@@ -821,6 +824,15 @@ body {
 .ueber-text {
     padding: 0 1em;
     font-family: Poppins, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bio-image {
+    display: block;
+    margin: 2em auto;
+    max-width: 90%;
+    border-radius: 12px;
 }
 
 @keyframes fadeIn {

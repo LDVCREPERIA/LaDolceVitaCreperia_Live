@@ -6,57 +6,10 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .about-hero {
-            width: 100%;
-            max-height: 60vh;
-            object-fit: cover;
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-        }
-
-        .about-image {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            margin: 3rem auto;
-            display: block;
-            border-radius: 8px;
-        }
-
-        .about-text {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(16px, 2vw, 20px);
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 3rem auto;
-            padding: 0 20px;
-            color: white;
-            text-align: center;
-        }
-
-        .final-image {
-            width: 100%;
-            max-height: 70vh;
-            object-fit: cover;
-            margin-top: 3rem;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .about-container {
-            background-color: #0e5ba9;
-            min-height: 100vh;
-            padding-bottom: 3rem;
-        }
-    </style>
 </head>
 <body>
     <div class="nav-container">
-        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <button class="hamburger-btn hamburger-icon" onclick="toggleNav()">☰</button>
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
             <a href="index.html">Home</a>
@@ -68,39 +21,21 @@
     </div>
 
     <div class="about-container">
-        <img src="attached_assets/20250405_croped.jpg" alt="La Dolce Vita Creperia Stand" class="ueber-hero" />
+        <img src="attached_assets/20250405_croped.jpg" alt="La Dolce Vita Stand" class="ueber-hero" />
 
-        <div class="about-text">
-            <div class="ueber-text">
-                <p>La Dolce Vita ist ein Familienbetrieb, gegründet von Roberto Polimeno. Seine Leidenschaft ist, Menschen ein Lächeln ins Gesicht zu zaubern – mit jedem Bissen. Roberto verwendet ausschließlich natürliche Zutaten aus der Region.</p>
+        <div class="ueber-text">
+            <p>La Dolce Vita ist ein Familienbetrieb, gegründet von Roberto Polimeno. Seine Leidenschaft ist, Menschen ein Lächeln ins Gesicht zu zaubern – mit jedem Bissen. Roberto verwendet ausschließlich natürliche Zutaten aus der Region.</p>
 
-                <p>Die Teigmischung wird täglich frisch angerührt und jede Crêpe wird direkt vor Ihren Augen zubereitet – mit Liebe, Handwerkskunst und einem Rezept, das seit über 80 Jahren in seiner Familie weitergegeben wird. Die Rezeptur stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.</p>
-            </div>
+            <p>Die Teigmischung wird täglich frisch angerührt und jede Crêpe wird direkt vor Ihren Augen zubereitet – mit Liebe, Handwerkskunst und einem Rezept, das seit über 80 Jahren in seiner Familie weitergegeben wird. Die Rezeptur stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.</p>
         </div>
 
-        <img src="20250405_150525.jpg" alt="La Dolce Vita Crepe Preparation" class="about-image">
-
-        <div class="about-text">
-            Egal ob Geburtstag, Hochzeit, Firmenevent oder Straßenfest – Roberto bringt das authentische Crêpe-Erlebnis direkt zu Ihnen.
-        </div>
-
-        <img src="attached_assets/Roberto1.jpg" alt="Roberto von La Dolce Vita Creperia" class="final-image">
-
-        <div class="branding-section">
-            <a href="booking.html" class="book-now-btn">Jetzt buchen</a>
-        </div>
+        <img src="attached_assets/Roberto1.jpg" alt="Roberto Polimeno" class="bio-image" />
     </div>
 
     <script>
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }
-
-        window.onpageshow = function(event) {
-            if (event.persisted) {
-                document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
-            }
-        };
     </script>
 </body>
 </html>
