@@ -36,15 +36,19 @@ body {
     .hamburger-btn {
         background: none;
         border: none;
-        font-size: 28px;
+        font-size: 24px;
         cursor: pointer;
         color: #ff9c00;
-        padding: 12px;
-        min-width: 48px;
-        min-height: 48px;
+        padding: 16px;
+        min-width: 56px;
+        min-height: 56px;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        z-index: 1100;
     }
 
     .nav-menu {
@@ -54,27 +58,32 @@ body {
         width: 100%;
         height: 100vh;
         background: white;
-        padding-top: 60px;
+        padding-top: 88px;
         transition: 0.3s ease-in-out;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Poppins', sans-serif !important;
         z-index: 1000;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
     }
 
     .nav-menu a {
-        font-size: clamp(16px, 2.5vw, 20px);
+        font-size: clamp(16px, 2.5vw, 18px);
         padding: 1rem 2rem;
         margin: 0.5rem 0;
         width: 100%;
         text-align: center;
         transition: all 0.3s ease;
+        font-family: 'Poppins', sans-serif !important;
+        color: #333;
+        text-decoration: none;
     }
 
     .nav-menu a:hover {
         background-color: rgba(255, 156, 0, 0.1);
-        transform: scale(1.05);
+        transform: scale(1.02);
+        color: #ff9c00;
     }
 
     .nav-menu.active {
@@ -82,12 +91,23 @@ body {
     }
 
     .nav-menu a {
-        text-decoration: none;
-        color: #ff9c00;
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.2rem;
-        padding: 15px;
         display: block;
+        position: relative;
+    }
+
+    .nav-menu a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        height: 2px;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-menu a:hover::after {
+        background-color: #ff9c00;
     }
 
     .nav-menu a:hover {
