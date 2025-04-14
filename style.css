@@ -661,17 +661,45 @@ body {
     transform: scale(1.05);
 }
 
-.gallery img {
-    max-width: 90%;
+.gallery-container {
+    padding-top: 80px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 600px;
     height: auto;
-    display: block;
-    margin: 10px auto;
     border-radius: 12px;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff9c00;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff9c00;
 }
 
 @media (max-width: 768px) {
-    .gallery img {
-        max-width: 300px;
+    .swiper-slide img {
+        max-width: 90%;
     }
 }
 
