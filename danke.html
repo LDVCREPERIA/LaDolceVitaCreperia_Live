@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke - La Dolce Vita Creperia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-container">
+        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <nav class="nav-menu">
+            <button class="close-btn" onclick="toggleNav()">×</button>
+            <a href="index.html">Home</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="menu.html">Menü</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </div>
+
+    <main class="thank-you-container">
+        <h2>Danke für Ihre Anfrage!</h2>
+        <p>Wir melden uns so schnell wie möglich bei Ihnen zurück.</p>
+        <a href="index.html" class="back-button">Zurück zur Startseite</a>
+    </main>
+
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -344,6 +344,33 @@ body {
     text-align: center;
 }
 
+.thank-you-container {
+    max-width: 600px;
+    margin: 100px auto 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.thank-you-container h2 {
+    color: #ff9c00;
+    margin-bottom: 20px;
+}
+
+.thank-you-container .back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #ff9c00;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.thank-you-container .back-button:hover {
+    background-color: #e68a00;
+}
+
 @media (max-width: 768px) {
     .booking-container {
         margin: 80px auto 20px;

@@ -41,16 +41,17 @@
 
     <main class="booking-container">
         <h1>Buchungsanfrage</h1>
-        <form class="booking-form" method="POST">
-            <!-- Formsubmit.io action will be added later -->
+        <form class="booking-form" action="https://formsubmit.co/ldvcreperia@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://ladolcevitacreperia.ch/danke.html">
             <div class="form-group">
                 <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required minlength="2">
             </div>
 
             <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
 
             <div class="form-group">
