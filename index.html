@@ -21,12 +21,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-selector">
-    <i class="fas fa-globe language-icon" aria-label="Sprache wechseln"></i>
-    <div id="google_translate_element"></div>
-</div>
-<div class="nav-container">
+    <div id="site-header">
         <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <img src="globe.png" onclick="toggleTranslateMenu()" aria-label="Sprache wechseln" style="width: 24px; height: 24px; margin-left: 10px; cursor: pointer;">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <div class="nav-container">
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
             <a href="index.html">Home</a>
@@ -43,7 +44,7 @@
             <p>Die besten Crêpes in der Schweiz</p>
         </div>
     </section>
-    
+
     <section class="main-navigation">
         <div class="nav-buttons">
             <a href="ueber-uns.html" class="nav-button">Über uns</a>
@@ -71,10 +72,15 @@
     </footer>
 
     <script>
-        function toggleNav() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        }
-        
+    function toggleTranslateMenu() {
+        var el = document.getElementById("google_translate_element");
+        el.style.display = (el.style.display === "block") ? "none" : "block";
+    }
+
+    function toggleNav() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    }
+
         window.onpageshow = function(event) {
             if (event.persisted) {
                 document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());

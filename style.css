@@ -9,27 +9,28 @@ body {
         overflow-x: hidden;
     }
 
-    header {
-        background-color: #f8f8f8;
-        padding: 1rem;
+    #site-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 64px;
+        background-color: #003366;
+        color: white;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 16px;
+        z-index: 999;
     }
 
-    .logo {
-        width: 100px;
-    }
-
-    /* Navigation styles */
     .nav-container {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background: white;
+        background: #003366;
         z-index: 1000;
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
@@ -38,17 +39,9 @@ body {
         border: none;
         font-size: 24px;
         cursor: pointer;
-        color: #ff9c00;
-        padding: 16px;
-        min-width: 56px;
-        min-height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 16px;
-        left: 16px;
-        z-index: 1100;
+        color: #FFD700;
+        min-width: 28px;
+        min-height: 28px;
     }
 
     .nav-menu {
@@ -176,11 +169,22 @@ body {
     }
 
     .menu-item img,
-    .gallery-item img {
+    .gallery-item img,
+    .ueber-uns img {
         border-radius: 10px;
-        width: 100%;
+        max-width: 90%;
         height: auto;
-        max-width: 300px;
+        display: block;
+        margin: 10px auto;
+        border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+        .menu-item img,
+        .gallery-item img,
+        .ueber-uns img {
+            max-width: 280px;
+        }
     }
 
 
@@ -390,12 +394,12 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: white; /* Ensure readability on blue background */
+  color: white;
   max-width: 800px;
   margin: 80px auto 40px;
   padding: 20px;
   text-align: center;
-  background-color: #0e5ba9; /* Brand blue background */
+  background-color: #0e5ba9;
 }
 
 .ueber-uns h2 {
@@ -413,7 +417,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 5px;
-  margin: 10px; /* Added padding for better spacing */
+  margin: 10px;
 }
 
 @media (max-width: 768px) {
@@ -524,7 +528,7 @@ body {
 
 .language-selector {
     position: fixed;
-    top: 20px;
+    top: 18px;
     right: 80px;
     z-index: 1001;
     display: flex;
@@ -534,7 +538,7 @@ body {
 
 .language-icon {
     font-size: 24px;
-    color: #ff9c00;
+    color: #FFD700; /* Changed to gold */
     cursor: pointer;
     padding: 8px;
 }
@@ -588,41 +592,6 @@ body {
     color: #1877F2;
 }
 
-.language-selector {
-    position: fixed;
-    top: 20px;
-    right: 80px;
-    z-index: 1001;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.language-icon {
-    font-size: 24px;
-    color: #ff9c00;
-    cursor: pointer;
-    padding: 8px;
-}
-
-.goog-logo-link, .goog-te-gadget span {
-    display: none !important;
-}
-
-.goog-te-gadget {
-    color: transparent !important;
-}
-
-#google_translate_element {
-    margin-left: 5px;
-}
-
-@media (max-width: 768px) {
-    .language-selector {
-        top: 15px;
-        right: 70px;
-    }
-}
 
 .menu-grid {
     max-width: 800px;
@@ -668,20 +637,6 @@ body {
     }
 }
 
-.menu-item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-    padding: 10px 0;
-}
-
-@media (max-width: 768px) {
-    .menu-item img {
-        max-width: 300px;
-    }
-}
 
 .menu-item:hover {
     transform: translateY(-2px);
@@ -709,3 +664,10 @@ body {
         padding: 1rem;
     }
 }
+
+<script>
+  function toggleTranslateMenu() {
+    var el = document.getElementById("google_translate_element");
+    el.style.display = (el.style.display === "block") ? "none" : "block";
+  }
+</script>
