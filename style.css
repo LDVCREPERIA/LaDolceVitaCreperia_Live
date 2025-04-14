@@ -792,30 +792,56 @@ body {
   }
 </script>
 
-.about-container {
-    margin-top: 80px;
-    padding: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+.about-hero {
+    margin-top: 64px;
+    width: 100%;
 }
 
-.ueber-hero {
+.hero-img {
     width: 100%;
     height: auto;
-    max-height: 420px;
     object-fit: cover;
+    max-height: 420px;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.about-content p {
     margin-bottom: 1.5em;
+    color: #444;
+}
+
+.portrait-img {
+    display: block;
+    margin: 2em auto;
+    max-width: 90%;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.ueber-text {
-    display: grid;
-    gap: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 1rem;
+    }
+    
+    .about-content h2 {
+        font-size: 24px;
+    }
 }
 
 .ueber-text p {
