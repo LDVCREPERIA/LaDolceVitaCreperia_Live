@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buchung - La Dolce Vita Creperia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-container">
+        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <nav class="nav-menu">
+            <button class="close-btn" onclick="toggleNav()">×</button>
+            <a href="index.html">Home</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="menu.html">Menü</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </div>
+
+    <main class="booking-container">
+        <h1>Buchungsanfrage</h1>
+        <form class="booking-form" method="POST">
+            <!-- Formsubmit.io action will be added later -->
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="plz">PLZ</label>
+                    <input type="text" id="plz" name="plz">
+                </div>
+                <div class="form-group half">
+                    <label for="city">Stadt</label>
+                    <input type="text" id="city" name="city">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="event_type">Art der Veranstaltung *</label>
+                <select id="event_type" name="event_type" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="Geburtstag">Geburtstag</option>
+                    <option value="Hochzeit">Hochzeit</option>
+                    <option value="Firmenfeier">Firmenfeier</option>
+                    <option value="Messe">Messe</option>
+                    <option value="Straßenfest">Straßenfest</option>
+                    <option value="Sonstiges">Sonstiges</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Anzahl der Gäste *</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Wunschtermin *</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <button type="submit" class="submit-button">Anfrage senden</button>
+            
+            <p class="form-disclaimer">
+                <em>Hinweis: Dies ist eine unverbindliche Buchungsanfrage. Wir melden uns zur Bestätigung bei Ihnen.</em>
+            </p>
+        </form>
+    </main>
+
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
