@@ -522,6 +522,42 @@ body {
     cursor: not-allowed;
 }
 
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-icon {
+    font-size: 24px;
+    color: #ff9c00;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.goog-logo-link, .goog-te-gadget span {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+#google_translate_element {
+    margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        top: 15px;
+        right: 70px;
+    }
+}
+
 .social-icons a {
     display: inline-flex;
     align-items: center;
