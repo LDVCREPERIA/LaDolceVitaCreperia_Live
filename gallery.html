@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<script type="text/javascript">
+    <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'de',
@@ -21,19 +22,20 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-    <div class="language-selector">
-        <i class="fas fa-globe language-icon" aria-label="Sprache wechseln"></i>
-        <div id="google_translate_element"></div>
+    <div id="site-header">
+        <button class="hamburger-btn" onclick="toggleNav(); vibrateFeedback(20)" style="font-size: 24px;">☰</button>
+        <img src="globe.png" onclick="toggleTranslateMenu(); vibrateFeedback(15)" aria-label="Sprache wechseln" style="width: 24px; height: 24px; margin-right: 20px; cursor: pointer;">
+        <div id="google_translate_element" style="display:none; position:absolute; top:50px; right:16px;"></div>
     </div>
+
     <div class="nav-container">
-        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <nav class="nav-menu">
-            <button class="close-btn" onclick="toggleNav()">×</button>
-            <a href="index.html">Home</a>
-            <a href="ueber-uns.html">Über uns</a>
-            <a href="menu.html">Menü</a>
-            <a href="gallery.html">Galerie</a>
-            <a href="kontakt.html">Kontakt</a>
+            <button class="close-btn" onclick="toggleNav(); vibrateFeedback(20)">×</button>
+            <a href="index.html" onclick="vibrateFeedback()">Home</a>
+            <a href="ueber-uns.html" onclick="vibrateFeedback()">Über uns</a>
+            <a href="menu.html" onclick="vibrateFeedback()">Menü</a>
+            <a href="gallery.html" onclick="vibrateFeedback()">Galerie</a>
+            <a href="kontakt.html" onclick="vibrateFeedback()">Kontakt</a>
         </nav>
     </div>
 
@@ -41,7 +43,7 @@
         <h1>Galerie</h1>
 
         <div class="image-grid">
-            <img src="20250414_145858_nohand.jpg" alt="La Dolce Vita Crêpe-Stand">
+            <img src="20250405_150053.jpg" alt="La Dolce Vita Crêpe-Stand">
             <img src="20250405_150053.jpg" alt="La Dolce Vita Stand im Einsatz">
             <img src="20250405_150315.jpg" alt="Crêpe-Zubereitung durch unseren Chef">
             <img src="20250405_150501.jpg" alt="Leckere Crêpe-Kreation">
@@ -49,7 +51,7 @@
             <img src="20250405_150525.jpg" alt="Traditionelle Crêpe-Zubereitung">
             <img src="attached_assets/20241107_200413.jpg" alt="Nachtservice bei La Dolce Vita">
             <img src="attached_assets/Roberto1.jpg" alt="Roberto von La Dolce Vita Creperia">
-            <img src="20250414_145858_nohand.jpg" alt="La Dolce Vita - Der Genuss zu jederzeit">
+            <img src="20250405_150053.jpg" alt="La Dolce Vita - Der Genuss zu jederzeit">
         </div>
 
         <a href="index.html" class="back-button">Zurück zur Startseite</a>
@@ -58,6 +60,17 @@
     <script>
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
+        }
+
+        function toggleTranslateMenu() {
+            var el = document.getElementById("google_translate_element");
+            el.style.display = (el.style.display === "block") ? "none" : "block";
+        }
+
+        function vibrateFeedback(ms = 20) {
+            if (navigator.vibrate) {
+                navigator.vibrate(ms);
+            }
         }
     </script>
 </body>
