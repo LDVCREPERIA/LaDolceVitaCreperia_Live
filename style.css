@@ -134,8 +134,9 @@ body {
     .hero {
         min-height: 100vh;
         background-image: url('hero-background.png');
-        background-size: cover;
-        background-position: center;
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -146,7 +147,13 @@ body {
         animation: fadeIn 1s ease-in-out;
     }
 
-    .hero h1, .hero p {
+    .hero h1 {
+        font-family: Poppins, sans-serif;
+        margin-top: 1em;
+        font-size: 24px;
+    }
+
+    .hero p {
         font-family: Poppins, sans-serif;
         margin: 0.5em 0;
     }
