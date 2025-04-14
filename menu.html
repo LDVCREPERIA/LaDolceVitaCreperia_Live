@@ -5,12 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menü - La Dolce Vita Creperia</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'de',
+                includedLanguages: 'de,en,it,fr,sq,tr,pt,es,sr,ar,uk',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav-container">
+    <div class="language-selector">
+    <i class="fas fa-globe language-icon" aria-label="Sprache wechseln"></i>
+    <div id="google_translate_element"></div>
+</div>
+<div class="nav-container">
         <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
