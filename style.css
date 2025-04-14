@@ -247,3 +247,13 @@ body
         width: 32px;
         height: 32px;
     }
+
+.ueber-uns {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
