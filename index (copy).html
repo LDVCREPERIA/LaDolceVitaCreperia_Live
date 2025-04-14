@@ -19,27 +19,14 @@
     <header>
         <img src="logo.png" alt="La Dolce Vita Creperia Logo" class="logo">
         <nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul id="nav-menu" class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="menu.html">Menü</a></li>
-                <li><a href="gallery.html">Galerie</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#menu">Menü</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
-        <script>
-            function toggleMenu() {
-                var menu = document.getElementById("nav-menu");
-                if (menu.style.display === "block") {
-                    menu.style.display = "none";
-                } else {
-                    menu.style.display = "block";
-                }
-            }
-        </script>
     </header>
 
     <section id="home" class="hero-section">
