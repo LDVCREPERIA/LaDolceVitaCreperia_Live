@@ -655,9 +655,28 @@ body {
 }
 
 .swiper {
-    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 50px;
+}
+
+.home-btn {
+    display: block;
+    margin: 2em auto;
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+    max-width: 200px;
+}
+
+.home-btn:hover {
+    background-color: #004488;
 }
 
 .swiper-slide {

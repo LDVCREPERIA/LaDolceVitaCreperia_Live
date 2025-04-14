@@ -9,25 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'de',
-                includedLanguages: 'de,en,it,fr,sq,tr,pt,es,sr,ar,uk',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <style>
-        .smarties-img {
-            width: 100%;
-            height: auto;
-            margin: 2em 0;
-            border-radius: 12px;
-        }
-    </style>
 </head>
 <body>
     <div id="site-header">
@@ -39,11 +20,11 @@
     <div class="nav-container">
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav(); vibrateFeedback(20)">×</button>
-            <a href="index.html" onclick="vibrateFeedback()">Home</a>
-            <a href="ueber-uns.html" onclick="vibrateFeedback()">Über uns</a>
-            <a href="menu.html" onclick="vibrateFeedback()">Menü</a>
-            <a href="gallery.html" onclick="vibrateFeedback()">Galerie</a>
-            <a href="kontakt.html" onclick="vibrateFeedback()">Kontakt</a>
+            <a href="index.html">Home</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="menu.html">Menü</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
         </nav>
     </div>
 
@@ -59,14 +40,14 @@
                 <div class="swiper-slide"><img src="20250405_150525.jpg" alt="Traditionelle Crêpe-Zubereitung"></div>
                 <div class="swiper-slide"><img src="attached_assets/20241107_200413.jpg" alt="Nachtservice"></div>
                 <div class="swiper-slide"><img src="attached_assets/Roberto1.jpg" alt="Roberto"></div>
-                <div class="swiper-slide"><img src="images/20250414_smarties.jpg" alt="La Dolce Vita Smarties Sign" class="smarties-img" /></div>
+                <div class="swiper-slide"><img src="images/20250414_smarties.jpg" alt="La Dolce Vita Smarties Sign" class="gallery-img"></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
 
-        <a href="index.html" class="back-button">Zurück zur Startseite</a>
+        <a href="index.html" class="home-btn">Home</a>
     </main>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
