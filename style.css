@@ -275,6 +275,14 @@ body {
     padding: 20px;
 }
 
+.form-intro {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
 .booking-form {
     background: white;
     padding: 30px;
