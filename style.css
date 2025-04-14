@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kugile&display=swap'); /* Added Kugile font import */
 body {
-        font-family: Arial, sans-serif;
+        font-family: 'Kugile', sans-serif; /* Set Kugile as default font */
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -230,14 +231,15 @@ body {
     }
 
 .ueber-uns {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Kugile', sans-serif; /* Kugile font applied */
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #ff9c00;
+  color: white; /* Ensure readability on blue background */
   max-width: 800px;
   margin: 80px auto 40px;
   padding: 20px;
   text-align: center;
+  background-color: #0e5ba9; /* Brand blue background */
 }
 
 .ueber-uns h2 {
@@ -255,6 +257,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 5px;
+  margin: 10px; /* Added padding for better spacing */
 }
 
 @media (max-width: 768px) {
@@ -263,7 +266,7 @@ body {
     padding: 15px;
     font-size: 1.1rem;
   }
-  
+
   .owner-image {
     margin: 30px auto;
   }
@@ -283,3 +286,24 @@ body {
         .button:hover {
           background-color: #084f8c;
         }
+
+.main-links {
+  margin-top: 30px;
+}
+
+.main-link {
+  font-family: 'Kugile', sans-serif;
+  color: #ff9c00;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  padding: 10px 20px;
+  border: 2px solid #ff9c00;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.main-link:hover {
+  background-color: #ff9c00;
+  color: white;
+}

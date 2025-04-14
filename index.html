@@ -1,87 +1,58 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Dolce Vita Creperia</title>
-    <link rel="stylesheet" href="style.css">ad
-    <link rel="stylesheet" <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">awesome/6.0.0-beta3/css/all.min.css">
-    ><style>
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-      }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kugile&display=swap" rel="stylesheet">
+</head>
 <body>
     <div class="nav-container">
-    <button class="hamburger-btn" onclick="toggleNav()">☰</button>
-    <nav class="nav-menu">
-        <button class="close-btn" onclick="toggleNav()">×</button>
-        <a href="index.html">Home</a>
-        <a href="ueber-uns.html">Über uns</a>
-        <a href="menu.html">Menü</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
-</div>
-<script>
-    function toggleNav() {
-        document.querySelector('.nav-menu').classList.toggle('active');
-    }
-</script>
+        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <nav class="nav-menu">
+            <button class="close-btn" onclick="toggleNav()">×</button>
+            <a href="index.html">Home</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="menu.html">Menü</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </div>
 
-    <section id="home" class="hero-section">
+    <section class="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">Willkommen bei La Dolce Vita Creperia</h1>
             <p>Die besten Crêpes in der Schweiz</p>
-    .
+            <div class="main-links">
+                <a href="ueber-uns.html" class="main-link">Über uns</a>
+                <a href="menu.html" class="main-link">Menü</a>
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2>Über uns</h2>
-        <p>Wir sind ein familiengeführtes
-        <div id="aboutContent">
-                La Dolce Vita ist ein Familienbetrieb, gegründet von Roberto Polimeno. Seine Leidenschaft ist es, Menschen ein Lächeln ins Gesicht zu zaubern – mit jedem Bissen. Roberto verwendet ausschließlich natürliche Zutaten aus der Region. Die Teigmischung wird täglich frisch angerührt und jede Crêpe wird direkt vor Ihren Augen zubereitet – mit Liebe, Handwerkskunst und einem Rezept, das seit über 60 Jahren in seiner Familie weitergegeben wird. Die Rezeptur stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.und einem Rezept, das seit über 60 Jahren in seiner Familie weitergegeben wird. Die Rezeptur stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.</p>tion>
-
-    <section id="menu">
-        <h2>Unser Menü</h2>
-        <div class="menu-item">
-            <img src="crepe1.jpg" alt="Crepe mit Schokolade">
-            <h3>Crepe mit Schokolade</h3>
-            <p>Feinste belgische Schokolade</p>
-        </div>
-        <div class="menu-item">
-            <img src="crepe2.jpg" alt="Crepe mit Erdbeeren">
-            <h3>Crepe mit Erdbeeren</h3>
-            <p>Frische Erdbeeren und Sahne</p>
-        </div>
-        <div class="menu-item">
-            <img src="crepe3.jpg" alt="Herzhafte Crepe">
-            <h3>Herzhafte Crepe</h3>
-            <p>Mit Käse und Schinken</p>
-        </div>
-    </section>
-
-    <section id="gallery">
-        <h2>Galerie</h2>
-        <!-- Footer Section with Social Icons -->
-        <footer>
-          <div class="social-icons">
+    <footer>
+        <div class="social-icons">
             <a href="https://www.instagram.com/ldvcreperia?igsh=MXN0dGhoZ2pqenJ3eA==" target="_blank">
-              <i class="fab fa-instagram"></i>
+                <i class="fab fa-instagram"></i>
             </a>
             <a href="https://www.facebook.com/share/18syiZheqh/" target="_blank">
-              <i class="fab fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
             </a>
             <a href="mailto:ldvcreperia@gmail.com">
-              <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope"></i>
             </a>
             <a href="https://wa.me/41768034207" target="_blank">
-              <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-whatsapp"></i>
             </a>
-          </div>
-        </footer>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,31 +1,24 @@
 
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
   <meta charset="UTF-8">
   <title>Über uns – La Dolce Vita</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kugile&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="nav-container">
-        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
-        <nav class="nav-menu">
-            <button class="close-btn" onclick="toggleNav()">×</button>
-            <a href="index.html">Home</a>
-            <a href="ueber-uns.html">Über uns</a>
-            <a href="menu.html">Menü</a>
-            <a href="gallery.html">Galerie</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
-    </div>
-    <script>
-        function toggleNav() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        }
-    </script>
+  <div class="nav-container">
+    <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+    <nav class="nav-menu">
+      <button class="close-btn" onclick="toggleNav()">×</button>
+      <a href="index.html">Home</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="menu.html">Menü</a>
+      <a href="gallery.html">Galerie</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
 
   <div class="ueber-uns">
     <h2>Über uns</h2>
@@ -36,11 +29,17 @@
       Liebe, Handwerkskunst und einem Rezept, das seit über 80 Jahren in seiner Familie weitergegeben wird. Die Rezeptur
       stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.
       
-      <div class="owner-image">
+      <div class="owner-images">
         <img src="file_0000000066ac5246bdfef7e15f0292ed_conversation_id=67f27ed9-4310-8007-9530-1ae64190bcfa&message_id=0feae0b5-0776-4c00-8333-364d634b2efd.jpg" alt="Roberto Polimeno">
+        <img src="Roberto1.jpg" alt="Roberto Polimeno">
       </div>
     </div>
   </div>
-</body>
 
+  <script>
+    function toggleNav() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    }
+  </script>
+</body>
 </html>
