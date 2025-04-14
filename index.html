@@ -30,8 +30,8 @@
 <body>
     <div id="site-header">
         <button class="hamburger-btn" onclick="toggleNav(); vibrateFeedback(20)">☰</button>
-        <img src="globe.png" onclick="toggleTranslateMenu(); vibrateFeedback(15)" aria-label="Sprache wechseln" style="width: 24px; height: 24px; margin-left: 10px; cursor: pointer;">
-        <div id="google_translate_element"></div>
+        <img src="images/globe-icon.png" alt="Sprache wechseln" class="globe-icon" onclick="toggleTranslateMenu(); vibrateFeedback(15)">
+        <div id="google_translate_element" style="display: none;"></div>
     </div>
 
     <div class="nav-container">
@@ -83,8 +83,12 @@
 
     <script>
     function toggleTranslateMenu() {
-        var el = document.getElementById("google_translate_element");
-        el.style.display = (el.style.display === "block") ? "none" : "block";
+        const el = document.getElementById("google_translate_element");
+        if (el.style.display === "block") {
+            el.style.display = "none";
+        } else {
+            el.style.display = "block";
+        }
     }
 
     function toggleNav() {

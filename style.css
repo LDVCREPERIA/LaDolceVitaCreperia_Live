@@ -23,6 +23,16 @@ body {
         z-index: 999;
     }
 
+.globe-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
     .nav-container {
         position: fixed;
         top: 0;
