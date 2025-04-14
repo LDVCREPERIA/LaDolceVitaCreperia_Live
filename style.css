@@ -9,17 +9,16 @@ body {
         overflow-x: hidden;
     }
 
-    #site-header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 64px;
-        background-color: #003366;
-        color: white;
+    .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 64px;
         padding: 0 16px;
+        background-color: #003366;
+        position: fixed;
+        top: 0;
+        width: 100%;
         z-index: 999;
     }
 

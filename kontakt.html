@@ -11,8 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav-container">
+    <div class="navbar">
         <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <img src="images/globe-icon.png" alt="Sprache wechseln" class="globe-icon" onclick="toggleTranslateMenu()" />
+        <div id="google_translate_element" style="display: none;"></div>
+    </div>
+    <div class="nav-container">
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
             <a href="index.html">Home</a>
