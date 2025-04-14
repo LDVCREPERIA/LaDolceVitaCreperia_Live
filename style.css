@@ -452,6 +452,13 @@ body {
   border-radius: 12px;
 }
 
+.nav-dropdown a {
+  font-size: 16px;
+  padding: 12px;
+  font-family: Poppins, sans-serif;
+  color: #000000;
+}
+
 .hamburger-icon {
   font-size: 24px;
   width: 28px;
@@ -459,42 +466,9 @@ body {
   line-height: 28px;
 }
 
-.nav-menu a {
-  font-size: 16px;
-  padding: 12px;
-  font-family: Poppins, sans-serif;
-  color: #000000;
-}
-
-
-.ueber-uns h2 {
-  margin-bottom: 30px;
-}
-
-.owner-image {
-  margin: 40px auto;
-  text-align: center;
-}
-
-.owner-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 5px;
-  margin: 10px;
-}
-
-@media (max-width: 768px) {
-  .ueber-uns {
-    margin: 60px auto 30px;
-    padding: 15px;
-    font-size: 1.1rem;
-  }
-
-  .owner-image {
-    margin: 30px auto;
-  }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 .button {
           background-color: #0e5ba9;
@@ -822,31 +796,24 @@ body {
     margin-top: 3rem;
 }
 
-
-.ueber-hero {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 2em;
+.about-us {
+  /* Add styles for the about us section */
 }
 
-.ueber-text {
-    padding: 0 1em;
-    font-family: Poppins, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+.about-us img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
 }
 
-.bio-image {
-    display: block;
-    margin: 2em auto;
-    max-width: 90%;
-    border-radius: 12px;
+.about-us p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
