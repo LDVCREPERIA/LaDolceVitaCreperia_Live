@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - La Dolce Vita Creperia</title>
+    <title>Menü - La Dolce Vita Creperia</title>
     <link rel="stylesheet" href="style.css">
-    <
+</head>
 <body>
     <div class="nav-container">
         <button class="hamburger-btn" onclick="toggleNav()">☰</button>
@@ -15,33 +15,25 @@
             <a href="index.html">Home</a>
             <a href="ueber-uns.html">Über uns</a>
             <a href="menu.html">Menü</a>
-            <a href="gallery.html">Galerie</a>
             <a href="kontakt.html">Kontakt</a>
         </nav>
     </div>
+    <main>
+        <section id="menu" class="menu-grid">
+            <div class="menu-item">
+                <h3>Crepe mit Schokolade</h3>
+                <p>Feinste belgische Schokolade</p>
+            </div>
+            <div class="menu-item">
+                <h3>Crepe mit Erdbeeren</h3>
+                <p>Frische Erdbeeren und Sahne</p>
+            </div>
+        </section>
+    </main>
     <script>
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }
     </script>
-    <main>
-        <section id="menu" class="menu-grid">
-            <div class="menu-item">
-                <img src="20250405_145858.jpg" alt="Crepe mit Schokolade">
-                <h3>Crepe mit Schokolade</h3>
-                <p>Feinste belgische Schokolade</p>
-            </div>
-            <div class="menu-item">
-                <img src="20250405_145909.jpg" alt="Crepe mit Erdbeeren">
-                <h3>Crepe mit Erdbeeren</h3>
-                <p>Frische Erdbeeren und Sahne</p>
-            </div>
-            <div class="menu-item">
-                <img src="20250405_150053.jpg" alt="Herzhafte Crepe">
-                <h3>Herzhafte Crepe</h3>
-                <p>Mit Käse und Schinken</p>
-            </div>
-        </section>
-    </main>
 </body>
 </html>
