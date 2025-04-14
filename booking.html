@@ -21,9 +21,10 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-    <div class="language-selector">
-        <i class="fas fa-globe language-icon" aria-label="Sprache wechseln"></i>
-        <div id="google_translate_element"></div>
+    <div class="navbar">
+        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <img src="images/globe-icon.png" alt="Sprache wechseln" class="globe-icon" onclick="toggleTranslateMenu()" />
+        <div id="google_translate_element" style="display: none;"></div>
     </div>
 <body>
     <div class="nav-container">
