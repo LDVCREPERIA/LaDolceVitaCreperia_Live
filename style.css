@@ -433,7 +433,7 @@ body {
   max-width: 800px;
   margin: 80px auto 40px;
   padding: 20px;
-  text-align: center;
+  text-align: justify; /* Changed to justify text */
   background-color: #0e5ba9;
 }
 
@@ -443,6 +443,7 @@ body {
   margin: 0 1em 1em 0;
   max-width: 50%;
   height: auto;
+  border-radius: 12px;
 }
 
 /* ensure text clears properly below */
@@ -452,19 +453,6 @@ body {
   clear: both;
 }
 
-.ueber-image {
-  float: left;
-  margin: 0 1em 1em 0;
-  max-width: 50%;
-  height: auto;
-  border-radius: 12px;
-}
-
-.ueber-text::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .ueber-uns h2 {
   margin-bottom: 30px;
@@ -788,3 +776,27 @@ body {
     el.style.display = (el.style.display === "block") ? "none" : "block";
   }
 </script>
+
+.about-container {
+    margin-top: 3rem;
+}
+
+
+.ueber-image {
+    float: left;
+    margin: 0 1em 1em 0;
+    max-width: 50%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.ueber-text::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
