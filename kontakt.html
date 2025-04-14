@@ -44,6 +44,12 @@
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }
+        
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
+            }
+        };
     </script>
 </body>
 </html>

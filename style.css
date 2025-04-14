@@ -60,7 +60,22 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-family: 'Kugile', sans-serif;
+        font-family: 'Kugile', 'Poppins', 'Playfair Display', sans-serif;
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        font-size: clamp(16px, 2.5vw, 20px);
+        padding: 1rem 2rem;
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+        background-color: rgba(255, 156, 0, 0.1);
+        transform: scale(1.05);
     }
 
     .nav-menu.active {
