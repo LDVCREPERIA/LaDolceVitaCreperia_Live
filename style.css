@@ -134,8 +134,8 @@ body {
         min-height: 100vh;
         background-image: url('hero-background.png');
         background-size: contain;
-        background-position: center top;
         background-repeat: no-repeat;
+        background-position: center top;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -143,18 +143,26 @@ body {
         padding: 180px 16px 40px;
         text-align: center;
         color: white;
-        animation: fadeIn 1s ease-in-out;
     }
 
     .hero h1 {
-        font-family: Poppins, sans-serif;
-        margin-top: 1em;
         font-size: 24px;
+        margin-bottom: 0.5em;
+        font-family: Poppins, sans-serif;
     }
 
     .hero p {
+        font-size: 16px;
+        margin-bottom: 1em;
         font-family: Poppins, sans-serif;
-        margin: 0.5em 0;
+    }
+
+    .globe-icon {
+        width: 28px;
+        height: 28px;
+        display: block;
+        margin-right: 16px;
+        cursor: pointer;
     }
 
     .nav-dropdown a {
