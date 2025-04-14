@@ -16,31 +16,22 @@
     </style>
 
 <body>
-    <header>
-        <img src="logo.png" alt="La Dolce Vita Creperia Logo" class="logo">
-        <nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul id="nav-menu" class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="menu.html">Menü</a></li>
-                <li><a href="gallery.html">Galerie</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-        <script>
-            function toggleMenu() {
-                var menu = document.getElementById("nav-menu");
-                if (menu.style.display === "block") {
-                    menu.style.display = "none";
-                } else {
-                    menu.style.display = "block";
-                }
-            }
-        </script>
-    </header>
+    <div class="nav-container">
+    <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+    <nav class="nav-menu">
+        <button class="close-btn" onclick="toggleNav()">×</button>
+        <a href="index.html">Home</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="menu.html">Menü</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+</div>
+<script>
+    function toggleNav() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    }
+</script>
 
     <section id="home" class="hero-section">
         <div class="hero-content">
