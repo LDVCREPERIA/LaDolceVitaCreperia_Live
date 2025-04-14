@@ -7,6 +7,48 @@
     <title>Galerie - La Dolce Vita Creperia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .gallery-container {
+            padding: 80px 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 20px 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #ff9c00;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <div class="nav-container">
@@ -25,17 +67,15 @@
         <h1>Galerie</h1>
         
         <div class="image-grid">
-            <img src="20250405_145858.jpg" alt="La Dolce Vita Crepe">
-            <img src="20250405_145909.jpg" alt="La Dolce Vita Crepe">
-            <img src="20250405_150053.jpg" alt="La Dolce Vita Crepe">
-            <img src="20250405_150315.jpg" alt="La Dolce Vita Crepe">
-            <img src="20250405_150501.jpg" alt="La Dolce Vita Crepe">
-            <img src="20250405_150513.jpg" alt="La Dolce Vita Crepe">
-            <img src="20250405_150525.jpg" alt="La Dolce Vita Crepe">
-            <img src="attached_assets/20241107_200413.jpg" alt="Night Event at La Dolce Vita Creperia">
-            <img src="attached_assets/Roberto1.jpg" alt="Roberto at La Dolce Vita Creperia">
-            <img src="Logo (2).PNG" alt="La Dolce Vita Creperia Logo">
-            <img src="hero-background.png" alt="La Dolce Vita Creperia Background">
+            <img src="20250405_145858.jpg" alt="Frische Crêpe-Zubereitung bei La Dolce Vita">
+            <img src="20250405_145909.jpg" alt="Crêpe mit leckerer Füllung">
+            <img src="20250405_150053.jpg" alt="La Dolce Vita Stand im Einsatz">
+            <img src="20250405_150315.jpg" alt="Crêpe-Zubereitung durch unseren Chef">
+            <img src="20250405_150501.jpg" alt="Leckere Crêpe-Kreation">
+            <img src="20250405_150513.jpg" alt="Crêpe-Stand bei einem Event">
+            <img src="20250405_150525.jpg" alt="Traditionelle Crêpe-Zubereitung">
+            <img src="attached_assets/20241107_200413.jpg" alt="Nachtservice bei La Dolce Vita">
+            <img src="attached_assets/Roberto1.jpg" alt="Roberto von La Dolce Vita Creperia">
         </div>
 
         <a href="index.html" class="back-button">Zurück zur Startseite</a>
