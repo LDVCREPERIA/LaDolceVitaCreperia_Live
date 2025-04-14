@@ -140,6 +140,69 @@ body {
 .contact {
   background-color: #eef7ff;
 }
+
+.contact-container {
+  max-width: 800px;
+  margin: 100px auto 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+
+.contact-info i {
+  color: #ff9c00;
+  margin-right: 10px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  width: 200px;
+  transition: transform 0.2s;
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+}
+
+.contact-button i {
+  margin-right: 8px;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.instagram {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.facebook {
+  background-color: #1877F2;
+}
 .btn {
         background-color: #ff6347;
         color: white;
