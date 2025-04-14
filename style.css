@@ -619,6 +619,37 @@ body {
     color: #1877F2;
 }
 
+.book-now-btn {
+    display: inline-block;
+    background-color: #ff9c00;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+.gallery img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 300px;
+    }
+}
+
 
 .menu-grid {
     max-width: 800px;
