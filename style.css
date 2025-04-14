@@ -793,7 +793,46 @@ body {
 </script>
 
 .about-container {
-    margin-top: 3rem;
+    margin-top: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ueber-hero {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ueber-text {
+    display: grid;
+    gap: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.ueber-text p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+        padding: 40px;
+    }
+    
+    .ueber-hero {
+        margin-bottom: 0;
+    }
 }
 
 .about-us {
