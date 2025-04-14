@@ -140,6 +140,60 @@ body {
 .contact {
   background-color: #eef7ff;
 }
+
+.gallery-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-page h1 {
+    color: #ff9c00;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.02);
+}
+
+.back-button {
+    display: inline-block;
+    margin: 2rem auto;
+    padding: 12px 24px;
+    background-color: #ff9c00;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e68a00;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
 .btn {
         background-color: #ff6347;
         color: white;

@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - La Dolce Vita Creperia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-container">
+        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <nav class="nav-menu">
+            <button class="close-btn" onclick="toggleNav()">×</button>
+            <a href="index.html">Home</a>
+            <a href="ueber-uns.html">Über uns</a>
+            <a href="menu.html">Menü</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </div>
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+
+    <main class="gallery-page">
+        <h1>Galerie</h1>
+        <div class="image-grid">
+            <img src="20250405_145858.jpg" alt="La Dolce Vita Creperia">
+            <img src="20250405_145909.jpg" alt="La Dolce Vita Creperia">
+            <img src="20250405_150053.jpg" alt="La Dolce Vita Creperia">
+            <img src="20250405_150315.jpg" alt="La Dolce Vita Creperia">
+            <img src="20250405_150501.jpg" alt="La Dolce Vita Creperia">
+            <img src="20250405_150513.jpg" alt="La Dolce Vita Creperia">
+            <img src="20250405_150525.jpg" alt="La Dolce Vita Creperia">
+        </div>
+        <a href="index.html" class="back-button">Zurück zur Startseite</a>
+    </main>
+</body>
+</html>
