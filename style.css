@@ -427,32 +427,43 @@ body {
         height: 32px;
     }
 
-.ueber-uns {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: white;
-  max-width: 800px;
-  margin: 80px auto 40px;
-  padding: 20px;
-  text-align: justify; /* Changed to justify text */
-  background-color: #0e5ba9;
+.ueber-hero {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 2em;
 }
 
-/* wrap Über uns image */
-.ueber-image {
-  float: left;
-  margin: 0 1em 1em 0;
-  max-width: 50%;
-  height: auto;
+.ueber-text {
+  padding: 0 1em;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bio-image {
+  display: block;
+  margin: 2em auto;
+  max-width: 90%;
   border-radius: 12px;
 }
 
-/* ensure text clears properly below */
-.ueber-text::after {
-  content: "";
-  display: table;
-  clear: both;
+.hamburger-icon {
+  font-size: 24px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.nav-menu a {
+  font-size: 16px;
+  padding: 12px;
+  font-family: Poppins, sans-serif;
+  color: #000000;
 }
 
 
