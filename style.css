@@ -782,18 +782,17 @@ body {
 }
 
 
-.ueber-image {
-    float: left;
-    margin: 0 1em 1em 0;
-    max-width: 50%;
-    height: auto;
-    border-radius: 12px;
+.ueber-hero {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 2em;
 }
 
-.ueber-text::after {
-    content: "";
-    display: table;
-    clear: both;
+.ueber-text {
+    padding: 0 1em;
+    font-family: Poppins, sans-serif;
 }
 
 @keyframes fadeIn {
