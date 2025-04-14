@@ -819,6 +819,7 @@ body {
     font-size: 28px;
     margin-bottom: 1em;
     color: #333;
+    text-align: center;
 }
 
 .about-content p {
@@ -832,6 +833,21 @@ body {
     max-width: 90%;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portrait-img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 1rem;
+    }
+    
+    .about-content h2 {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 768px) {
