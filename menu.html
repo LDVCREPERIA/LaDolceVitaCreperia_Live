@@ -1,33 +1,85 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - La Dolce Vita Creperia</title>
-    <l<style>
-            h2, h3 {
-                color: #ff9c00; /* La Dolce Vita logo color */
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button {
+            background-color: #ff6347;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .back-button:hover {
+            background-color: #ff4500;
+            transform: translateY(-2px);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
             }
-        </style>
-        ink rel="stylesheet" href="style.css">
+        }
+    </style>
 </head>
 <body>
-    <button onclick="window.location.href='index.html'">Back to Home</button>
+    <a href="index.html" class="back-button">← Zurück zur Startseite</a>
     <main>
-        <section id="menu">
-                     <div class="menu-item">
-                <img src="crepe1.jpg" alt="Crepe mit Schokolade">
+        <section id="menu" class="menu-grid">
+            <div class="menu-item">
+                <img src="20250405_145858.jpg" alt="Crepe mit Schokolade">
                 <h3>Crepe mit Schokolade</h3>
                 <p>Feinste belgische Schokolade</p>
             </div>
             <div class="menu-item">
-                <img src="crepe2.jpg" alt="Crepe mit Erdbeeren">
+                <img src="20250405_145909.jpg" alt="Crepe mit Erdbeeren">
                 <h3>Crepe mit Erdbeeren</h3>
                 <p>Frische Erdbeeren und Sahne</p>
             </div>
             <div class="menu-item">
-                <img src="crepe3.jpg" alt="Herzhafte Crepe">
-
+                <img src="20250405_150053.jpg" alt="Herzhafte Crepe">
+                <h3>Herzhafte Crepe</h3>
+                <p>Mit Käse und Schinken</p>
+            </div>
         </section>
     </main>
 </body>
