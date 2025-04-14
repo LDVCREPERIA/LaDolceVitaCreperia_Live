@@ -844,7 +844,7 @@ body {
     .about-content {
         padding: 0 1rem;
     }
-    
+
     .about-content h2 {
         font-size: 24px;
     }
@@ -854,7 +854,7 @@ body {
     .about-content {
         padding: 0 1rem;
     }
-    
+
     .about-content h2 {
         font-size: 24px;
     }
@@ -873,7 +873,7 @@ body {
         align-items: start;
         padding: 40px;
     }
-    
+
     .ueber-hero {
         margin-bottom: 0;
     }
@@ -899,4 +899,11 @@ body {
 .about-us h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+.smarties-img {
+    width: 100%;
+    height: auto;
+    margin: 2em 0;
+    border-radius: 12px;
 }
