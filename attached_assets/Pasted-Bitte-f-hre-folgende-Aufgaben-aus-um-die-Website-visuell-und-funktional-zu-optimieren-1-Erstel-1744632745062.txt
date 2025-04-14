@@ -1,0 +1,48 @@
+Bitte führe folgende Aufgaben aus, um die Website visuell und funktional zu optimieren:
+
+1. **Erstelle `kontakt.html` mit den folgenden Inhalten:**
+   - Seitenüberschrift: “Kontakt”
+   - Button: **“Chatte mit uns auf WhatsApp”**
+     - Link: https://wa.me/41799168764
+     - Stilisiert mit grünem WhatsApp-Logo
+     - Mobilfreundlich mit abgerundeten Kanten
+   - Kontaktinformationen:
+     - Telefonnummer: +41 79 916 87 64 (als klickbarer Link mit `tel:`)
+     - E-Mail: ldvcreperia@gmail.com (als klickbarer Link mit `mailto:`)
+   - Zeige auch alle Social-Media-Icons (Instagram, Facebook, Gmail, WhatsApp) mit aktuellen funktionierenden Links
+   - Alle Icons größer darstellen und zentral ausrichten
+   - Footer-Text hinzufügen: **"Kontaktieren Sie uns"** oder **"Folgen Sie uns auf"**
+
+2. **Footer (alle Seiten):**
+   - Ersetze alten Footer durch neue Version:
+     - Überschrift: “Kontaktieren Sie uns”
+     - Größere, farbige Social Icons (Instagram farbig, WhatsApp grün, Facebook offiziell)
+     - Einheitliches Spacing & Hover-Styling
+
+3. **Fixe `menu.html`:**
+   - Entferne alle Bilder, die zur Galerie gehören
+   - Entferne den Menüpunkt “Käse und Schinken” (Ham & Cheese)
+   - Seite nur auf Deutsch anzeigen (keine englischen Texte)
+   - Stelle sicher, dass Menü-Inhalte korrekt und nicht dupliziert sind
+
+4. **Fixe `ueber-uns.html`:**
+   - Inhalt zentrieren und vollständige Textdarstellung sicherstellen
+   - Entferne das Abschneiden am unteren Rand auf mobilen Geräten
+   - Füge das Bild von Roberto (Dateiname: `roberto.jpg` oder den Bildnamen verwenden, den Mr. Negotiator hochgeladen hat) am unteren Teil der Seite ein
+   - Stelle sicher, dass die Schriftart dieselbe ist wie im Hamburger-Menü (siehe Screenshot mit goldenem Text)
+
+5. **Hamburger-Menü (Dropdown):**
+   - Erhöhe die Schriftgröße aller Menüpunkte für bessere Lesbarkeit
+   - Behebe den Fehler, dass das Menü auf der Seite “Über uns” extrem klein dargestellt wird
+   - Menüeinträge müssen konsistent aussehen und funktionieren auf allen Seiten
+   - Füge ein Sprachwahl-Symbol (Globus-Icon) in die obere rechte Ecke ein
+     - (Derzeit nur Deutsch nötig – kann als nicht-funktionaler Platzhalter mit Tooltip “Sprache wechseln” dargestellt werden)
+
+6. **Push all changes to GitHub:**
+
+```bash
+git add .
+git commit -m "Fix: Kontaktseite, Menü-Fehler, Footer-Socials, Layout-Optimierungen"
+git push -u origin main
+
+> > > Sobald alles live ist, bestätige bitte, dass die Seite https://ladolcevitacreperia.ch/kontakt.html funktioniert und alle anderen Seiten aktualisiert sind.
