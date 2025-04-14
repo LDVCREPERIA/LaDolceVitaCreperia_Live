@@ -665,6 +665,28 @@ body {
     }
 }
 
+.final-image {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    margin-top: 3rem;
+}
+
+.branding-section {
+    margin: 4rem auto 2rem;
+    padding: 0 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.branding-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 <script>
   function toggleTranslateMenu() {
     var el = document.getElementById("google_translate_element");
