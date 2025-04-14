@@ -429,6 +429,21 @@ body {
   background-color: #0e5ba9;
 }
 
+/* wrap Über uns image */
+.ueber-image {
+  float: left;
+  margin: 0 1em 1em 0;
+  max-width: 50%;
+  height: auto;
+}
+
+/* ensure text clears properly below */
+.ueber-text::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .ueber-uns h2 {
   margin-bottom: 30px;
 }
