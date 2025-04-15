@@ -45,10 +45,13 @@
     </div>
 
     <div class="music-control">
-        <audio id="bg-music" loop>
+        <audio id="bg-music" loop playsinline>
             <source src="attached_assets/Snippet Tarantella .mp3" type="audio/mpeg">
         </audio>
-        <button onclick="toggleMusic()" class="music-toggle">🎵</button>
+        <button onclick="toggleMusic()" class="music-toggle" aria-label="Musik abspielen/pausieren">
+            <span class="music-label">Klicken für Musik</span>
+            <span class="music-icon">🎵</span>
+        </button>
     </div>
 
     <div class="nav-container">
@@ -98,14 +101,35 @@
     </footer>
 
     <script>
+    async function initializeAudio() {
+        const music = document.getElementById("bg-music");
+        const button = document.querySelector('.music-toggle');
+
+        try {
+            music.muted = true;
+            await music.play();
+            // Try to unmute if autoplay succeeded
+            music.muted = false;
+            if (!music.paused) {
+                button.classList.add('active');
+            }
+        } catch (err) {
+            console.log('Autoplay prevented:', err);
+        }
+    }
+
     function toggleMusic() {
         const music = document.getElementById("bg-music");
+        const button = document.querySelector('.music-toggle');
+
         if (music.paused) {
+            music.muted = false;
             music.play();
+            button.classList.add('active');
         } else {
             music.pause();
+            button.classList.remove('active');
         }
-        document.querySelector('.music-toggle').classList.toggle('active');
     }
 
     function changeLanguage(lang) {
@@ -208,6 +232,7 @@
                 document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
             }
         };
+    document.addEventListener('DOMContentLoaded', initializeAudio);
     </script>
 </body>
 </html>
