@@ -4,7 +4,7 @@
 html, body {
   scroll-behavior: smooth;
   overscroll-behavior: contain;
-  background-color: #003366;
+  background-color: #ffffff;
   opacity: 1 !important;
   visibility: visible !important;
   transition: none !important;
@@ -16,6 +16,10 @@ html, body {
   box-sizing: border-box;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+.hero {
+  background-color: #003366;
 }
 
     .navbar {
