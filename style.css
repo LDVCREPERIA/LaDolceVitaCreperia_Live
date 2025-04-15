@@ -823,15 +823,18 @@ body {
 
 .music-control {
     position: fixed;
-    top: 80px;
-    left: 0.25rem;
-    z-index: 1000;
+    bottom: 80px;
+    right: 16px;
+    z-index: 90;
+    pointer-events: none;
+    width: 48px;
+    height: 48px;
 }
 
 .music-toggle {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: #003366;
     color: white;
@@ -843,6 +846,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Merienda', cursive;
+    pointer-events: auto;
 }
 
 .music-icon {
