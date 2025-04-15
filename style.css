@@ -632,13 +632,22 @@ html, body {
 }
 
 .slide-left {
-    animation: slideLeft 0.15s ease-out forwards;
+    animation: slideLeft 0.1s ease-out forwards;
     pointer-events: none;
+    will-change: transform;
 }
 
 .slide-right {
-    animation: slideRight 0.15s ease-out forwards;
+    animation: slideRight 0.1s ease-out forwards;
     pointer-events: none;
+    will-change: transform;
+}
+
+body {
+    background-color: #ffffff;
+    opacity: 1 !important;
+    visibility: visible !important;
+    min-height: 100vh;
 }
 .button {
           background-color: #0e5ba9;

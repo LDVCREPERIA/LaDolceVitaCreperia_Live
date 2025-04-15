@@ -63,12 +63,17 @@ function handleSwipe() {
 
   // Add animation class based on swipe direction
   const content = document.querySelector('main') || document.body;
+  // Preload the next page
+  const nextPage = pages[nextIndex];
+  const preloadLink = document.createElement('link');
+  preloadLink.rel = 'prefetch';
+  preloadLink.href = nextPage;
+  document.head.appendChild(preloadLink);
+
   content.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
 
   // Wait for animation to complete before redirecting
-  requestAnimationFrame(() => {
-    content.style.opacity = "1";
-    content.style.visibility = "visible";
-    window.location.href = pages[nextIndex];
-  });
+  setTimeout(() => {
+    window.location.href = nextPage;
+  }, 100);
 }
