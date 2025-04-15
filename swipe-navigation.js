@@ -62,26 +62,31 @@ function handleSwipe() {
   }
 
   // Add animation class based on swipe direction
-  const content = document.querySelector('main') || document.body;
-  // Preload the next page
+  const mainContent = document.querySelector('main') || document.body;
   const nextPage = pages[nextIndex];
+  
+  // Preload next page
   const preloadLink = document.createElement('link');
   preloadLink.rel = 'prefetch';
   preloadLink.href = nextPage;
   document.head.appendChild(preloadLink);
 
-  content.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.top = '0';
+  overlay.style.left = '0';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.backgroundColor = getComputedStyle(document.body).backgroundColor;
+  overlay.style.zIndex = '9998';
+  document.body.appendChild(overlay);
 
-  // Preload and transition immediately
-  const content = document.createElement('div');
-  content.style.position = 'fixed';
-  content.style.top = '0';
-  content.style.left = '0';
-  content.style.width = '100%';
-  content.style.height = '100%';
-  content.style.backgroundColor = document.body.style.backgroundColor;
-  content.style.zIndex = '9998';
-  document.body.appendChild(content);
+  // Add animation class
+  mainContent.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
   
-  window.location.href = nextPage;
+  // Navigate after brief animation
+  setTimeout(() => {
+    window.location.href = nextPage;
+  }, 150);
 }
