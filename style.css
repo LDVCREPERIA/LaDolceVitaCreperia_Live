@@ -714,6 +714,8 @@ body {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 5;
 }
 
 .nav-button:hover {
@@ -894,6 +896,8 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: transform 0.2s;
+    position: relative; /* Added for z-index */
+    z-index: 5; /* Added for z-index */
 }
 
 .social-icons a.social-link:hover {
@@ -998,6 +1002,8 @@ body {
     width: 100%;
     text-align: center;
     transition: all 0.3s ease;
+    position: relative; /* Added for z-index */
+    z-index: 5; /* Added for z-index */
 }
 
 .home-btn:hover {
