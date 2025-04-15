@@ -902,8 +902,10 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: transform 0.2s;
-    position: relative; /* Added for z-index */
-    z-index: 5; /* Added for z-index */
+    position: relative;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .social-icons a.social-link:hover {
@@ -1398,10 +1400,13 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    pointer-events: auto;
-    display: inline-block;
+    display: block;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 1rem;
+    background: white;
 }
 
 .swiper-button-next,
