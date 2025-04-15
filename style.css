@@ -74,14 +74,15 @@ body {
     }
 
     .nav-menu a {
-        font-size: 16px;
-        padding: 12px;
+        font-size: 1.2rem;
+        padding: 14px;
         font-family: 'Merienda', cursive;
         color: #000000;
         text-decoration: none;
         display: block;
         width: 100%;
         text-align: center;
+        line-height: 1.4;
     }
 
     .nav-menu a:hover {
