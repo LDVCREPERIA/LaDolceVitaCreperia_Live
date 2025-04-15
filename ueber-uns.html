@@ -10,9 +10,19 @@
 </head>
 <body>
     <div class="navbar">
-        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
-        <img src="images/globe-icon.png" alt="Sprache wechseln" class="globe-icon" onclick="toggleTranslateMenu()" />
-        <div id="google_translate_element" style="display: none;"></div>
+        <button class="hamburger-btn" onclick="toggleNav(); vibrateFeedback(20)">☰</button>
+        <div class="language-selector">
+            <i class="fas fa-globe"></i>
+            <select onChange="changeLanguage(this.value)">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="it">IT</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="pt">PT</option>
+                <option value="sq">SQ</option>
+            </select>
+        </div>
     </div>
     <div class="nav-container">
         <nav class="nav-menu">
