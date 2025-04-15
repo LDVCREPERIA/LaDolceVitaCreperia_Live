@@ -909,7 +909,7 @@ body {
 }
 
 .book-now-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: #ff9c00;
@@ -923,6 +923,7 @@ body {
     font-family: 'Merienda', cursive;
     width: 100%;
     min-height: 45px;
+    text-align: center;
 }
 
 .book-now-btn:hover {
