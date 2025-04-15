@@ -73,7 +73,9 @@ function handleSwipe() {
   content.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
 
   // Wait for animation to complete before redirecting
-  setTimeout(() => {
-    window.location.href = nextPage;
-  }, 100);
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      window.location.href = nextPage;
+    }, 40);
+  });
 }

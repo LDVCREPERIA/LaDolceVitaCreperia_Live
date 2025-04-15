@@ -622,25 +622,29 @@ html, body {
 
 /* Swipe animation styles */
 @keyframes slideLeft {
-    from { transform: translateX(0); opacity: 1; }
-    to { transform: translateX(-100%); opacity: 0; }
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
 }
 
 @keyframes slideRight {
-    from { transform: translateX(0); opacity: 1; }
-    to { transform: translateX(100%); opacity: 0; }
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
 }
 
 .slide-left {
-    animation: slideLeft 0.1s ease-out forwards;
+    animation: slideLeft 0.05s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     pointer-events: none;
     will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .slide-right {
-    animation: slideRight 0.1s ease-out forwards;
+    animation: slideRight 0.05s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     pointer-events: none;
     will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 body {
