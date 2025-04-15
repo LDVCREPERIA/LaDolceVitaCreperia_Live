@@ -640,6 +640,59 @@ body {
     }
 }
 
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.language-selector select {
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.language-selector select option {
+    background: #003366;
+    color: white;
+}
+
+.music-control {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.music-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.music-toggle:hover {
+    background: #4CAF50;
+    transform: scale(1.1);
+}
+
+.music-toggle.active {
+    transform: scale(1.1);
+}
+
 .social-icons a {
     display: inline-flex;
     align-items: center;

@@ -30,8 +30,23 @@
 <body>
     <div class="navbar">
         <button class="hamburger-btn" onclick="toggleNav(); vibrateFeedback(20)">☰</button>
-        <img src="images/globe-icon.png" alt="Sprache wechseln" class="globe-icon" onclick="toggleTranslateMenu(); vibrateFeedback(15)" />
-        <div id="google_translate_element" style="display: none;"></div>
+        <div class="language-selector">
+            <i class="fas fa-globe"></i>
+            <select onChange="changeLanguage(this.value)">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="it">IT</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="music-control">
+        <audio id="bg-music" loop>
+            <source src="background-music.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="toggleMusic()" class="music-toggle">🎵</button>
     </div>
 
     <div class="nav-container">
@@ -80,6 +95,47 @@
     </footer>
 
     <script>
+    function toggleMusic() {
+        const music = document.getElementById("bg-music");
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
+        document.querySelector('.music-toggle').classList.toggle('active');
+    }
+
+    function changeLanguage(lang) {
+        const translations = {
+            "de": {
+                "welcome": "Willkommen bei La Dolce Vita Creperia",
+                "subtitle": "Die besten Crêpes in der Schweiz",
+                "about": "Über uns",
+                "menu": "Menü",
+                "gallery": "Galerie",
+                "contact": "Kontakt",
+                "book": "Jetzt buchen"
+            },
+            "en": {
+                "welcome": "Welcome to La Dolce Vita Creperia",
+                "subtitle": "The best Crêpes in Switzerland",
+                "about": "About Us",
+                "menu": "Menu",
+                "gallery": "Gallery",
+                "contact": "Contact",
+                "book": "Book Now"
+            }
+            // Add other language translations as needed
+        };
+
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.dataset.translate;
+            if (translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+    }
+
     function toggleTranslateMenu() {
         const el = document.getElementById("google_translate_element");
         if (el.style.display === "block") {
