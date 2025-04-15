@@ -74,10 +74,6 @@ function handleSwipe() {
   link.href = nextPage;
   document.head.appendChild(link);
 
-  // Navigate after animation starts
-  requestAnimationFrame(() => {
-    setTimeout(() => {
-      window.location.href = nextPage;
-    }, 180);
-  });
+  // Navigate faster after animation starts
+  window.location.href = nextPage;
 }

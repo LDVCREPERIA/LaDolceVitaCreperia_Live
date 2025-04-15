@@ -632,7 +632,7 @@ html, body {
 }
 
 .slide-left {
-    animation: slideLeft 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: slideLeft 0.15s ease-out forwards;
     pointer-events: none;
     will-change: transform;
     position: fixed;
@@ -641,11 +641,11 @@ html, body {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 .slide-right {
-    animation: slideRight 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: slideRight 0.15s ease-out forwards;
     pointer-events: none;
     will-change: transform;
     position: fixed;
@@ -654,7 +654,7 @@ html, body {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 body {
