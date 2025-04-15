@@ -132,29 +132,43 @@ body {
 
     .hero {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 80px 20px 60px;
         background-color: #003366;
-        padding: 20px;
         box-sizing: border-box;
     }
 
-    .logo-container {
+    .hero-logo {
+        display: block;
+        max-width: 90vw;
         width: 100%;
-        padding-bottom: 56.25%;
-        background-image: url('hero-background.png');
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
+        height: auto;
+        margin: 0 auto;
     }
 
-    .welcome-text {
+    .hero h1 {
+        margin-top: 40px;
         text-align: center;
         color: white;
-        padding: 40px 20px;
-        width: 100%;
-        max-width: 800px;
+        font-family: Poppins, sans-serif;
+        font-size: clamp(24px, 5vw, 36px);
+    }
+
+    .hero p {
+        margin-top: 16px;
+        text-align: center;
+        color: white;
+        font-family: Poppins, sans-serif;
+        font-size: clamp(16px, 3vw, 20px);
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding: 60px 16px 40px;
+        }
+        
+        .hero h1 {
+            margin-top: 32px;
+        }
     }
 
     .hero h1 {
