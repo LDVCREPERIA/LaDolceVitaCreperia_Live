@@ -810,7 +810,7 @@ body {
 
 .music-control {
     position: fixed;
-    bottom: 2rem;
+    bottom: calc(2rem + 60px);
     right: 2rem;
     z-index: 1000;
 }
@@ -912,13 +912,15 @@ body {
     display: inline-block;
     background-color: #ff9c00;
     color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
     margin: 20px 0;
     transition: all 0.3s ease;
     font-family: 'Merienda', cursive;
+    width: 100%;
+    text-align: center;
 }
 
 .book-now-btn:hover {
