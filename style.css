@@ -4,19 +4,21 @@
 html {
   scroll-behavior: smooth;
   overscroll-behavior: contain;
+  background-color: #003366;
 }
 
 body {
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-        font-family: 'Merienda', cursive;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        min-height: 100vh;
-        overflow-x: hidden;
-    }
+  font-family: 'Merienda', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #003366;
+}
 
     .navbar {
         display: flex;
@@ -196,6 +198,8 @@ body {
         padding: 80px 20px 60px;
         background-color: #003366;
         box-sizing: border-box;
+        position: relative;
+        z-index: 1;
     }
 
     .hero-logo {
