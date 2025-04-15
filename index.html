@@ -38,6 +38,8 @@
                 <option value="it">IT</option>
                 <option value="fr">FR</option>
                 <option value="es">ES</option>
+                <option value="pt">PT</option>
+                <option value="sq">SQ</option>
             </select>
         </div>
     </div>
@@ -52,30 +54,30 @@
     <div class="nav-container">
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav(); vibrateFeedback(20)">×</button>
-            <a href="index.html" onclick="vibrateFeedback()">Home</a>
-            <a href="ueber-uns.html" onclick="vibrateFeedback()">Über uns</a>
-            <a href="menu.html" onclick="vibrateFeedback()">Menü</a>
-            <a href="gallery.html" onclick="vibrateFeedback()">Galerie</a>
-            <a href="kontakt.html" onclick="vibrateFeedback()">Kontakt</a>
+            <a href="index.html" onclick="vibrateFeedback()" data-translate="home">Home</a>
+            <a href="ueber-uns.html" onclick="vibrateFeedback()" data-translate="about">Über uns</a>
+            <a href="menu.html" onclick="vibrateFeedback()" data-translate="menu">Menü</a>
+            <a href="gallery.html" onclick="vibrateFeedback()" data-translate="gallery">Galerie</a>
+            <a href="kontakt.html" onclick="vibrateFeedback()" data-translate="contact">Kontakt</a>
         </nav>
     </div>
 
     <section class="hero">
-        <h1>Willkommen bei La Dolce Vita Creperia</h1>
-        <p>Die besten Crêpes in der Schweiz</p>
+        <h1 data-translate="welcome">Willkommen bei La Dolce Vita Creperia</h1>
+        <p data-translate="subtitle">Die besten Crêpes in der Schweiz</p>
     </section>
 
     <section class="main-navigation">
         <div class="nav-buttons">
-            <a href="ueber-uns.html" class="nav-button" onclick="vibrateFeedback()">Über uns</a>
-            <a href="menu.html" class="nav-button" onclick="vibrateFeedback()">Menü</a>
-            <a href="booking.html" class="nav-button" onclick="vibrateFeedback()">Book Us Now</a>
-            <a href="kontakt.html" class="nav-button" onclick="vibrateFeedback()">Kontakt Info</a>
+            <a href="ueber-uns.html" class="nav-button" onclick="vibrateFeedback()" data-translate="about">Über uns</a>
+            <a href="menu.html" class="nav-button" onclick="vibrateFeedback()" data-translate="menu">Menü</a>
+            <a href="booking.html" class="nav-button" onclick="vibrateFeedback()" data-translate="book">Book Us Now</a>
+            <a href="kontakt.html" class="nav-button" onclick="vibrateFeedback()" data-translate="contact">Kontakt Info</a>
         </div>
     </section>
 
     <div class="cta-section" style="text-align: center; margin: 2rem 0;">
-        <a href="booking.html" class="book-now-btn" style="color: #003366;" onclick="vibrateFeedback()">Jetzt buchen</a>
+        <a href="booking.html" class="book-now-btn" style="color: #003366;" onclick="vibrateFeedback()" data-translate="book">Jetzt buchen</a>
     </div>
     <footer>
         <div class="social-icons">
@@ -114,7 +116,8 @@
                 "menu": "Menü",
                 "gallery": "Galerie",
                 "contact": "Kontakt",
-                "book": "Jetzt buchen"
+                "book": "Jetzt buchen",
+                "home": "Startseite"
             },
             "en": {
                 "welcome": "Welcome to La Dolce Vita Creperia",
@@ -123,9 +126,59 @@
                 "menu": "Menu",
                 "gallery": "Gallery",
                 "contact": "Contact",
-                "book": "Book Now"
+                "book": "Book Now",
+                "home": "Home"
+            },
+            "it": {
+                "welcome": "Benvenuti alla La Dolce Vita Creperia",
+                "subtitle": "Le migliori crêpes in Svizzera",
+                "about": "Chi Siamo",
+                "menu": "Menù",
+                "gallery": "Galleria",
+                "contact": "Contatto",
+                "book": "Prenota Ora",
+                "home": "Home"
+            },
+            "fr": {
+                "welcome": "Bienvenue à La Dolce Vita Creperia",
+                "subtitle": "Les meilleures crêpes de Suisse",
+                "about": "À Propos",
+                "menu": "Menu",
+                "gallery": "Galerie",
+                "contact": "Contact",
+                "book": "Réservez Maintenant",
+                "home": "Accueil"
+            },
+            "es": {
+                "welcome": "Bienvenido a La Dolce Vita Creperia",
+                "subtitle": "Las mejores crêpes de Suiza",
+                "about": "Sobre Nosotros",
+                "menu": "Menú",
+                "gallery": "Galería",
+                "contact": "Contacto",
+                "book": "Reserva Ahora",
+                "home": "Inicio"
+            },
+            "pt": {
+                "welcome": "Bem-vindo à La Dolce Vita Creperia",
+                "subtitle": "Os melhores Crêpes na Suíça",
+                "about": "Sobre Nós",
+                "menu": "Cardápio",
+                "gallery": "Galeria",
+                "contact": "Contato",
+                "book": "Reserve Agora",
+                "home": "Início"
+            },
+            "sq": {
+                "welcome": "Mirë se vini në La Dolce Vita Creperia",
+                "subtitle": "Krepat më të mira në Zvicër",
+                "about": "Rreth Nesh",
+                "menu": "Menu",
+                "gallery": "Galeria",
+                "contact": "Kontakt",
+                "book": "Rezervo Tani",
+                "home": "Ballina"
             }
-            // Add other language translations as needed
         };
 
         document.querySelectorAll('[data-translate]').forEach(element => {
