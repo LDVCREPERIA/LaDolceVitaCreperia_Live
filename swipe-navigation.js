@@ -45,6 +45,13 @@ function handleSwipe() {
     nextIndex = currentIndex + 1;
     if (nextIndex >= pages.length) nextIndex = 0; // Loop to start
   }
+
+  // Add animation class based on swipe direction
+  const content = document.querySelector('main') || document.body;
+  content.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
   
-  window.location.href = pages[nextIndex];
+  // Wait for animation to complete before redirecting
+  setTimeout(() => {
+    window.location.href = pages[nextIndex];
+  }, 300);
 }
