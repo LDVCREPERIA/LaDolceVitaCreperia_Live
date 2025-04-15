@@ -22,6 +22,35 @@ body {
         z-index: 999;
     }
 
+.header-brand {
+    color: white;
+    font-family: 'Merienda', cursive;
+    font-size: 1.4rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.nav-menu-brand {
+    color: #003366;
+    font-family: 'Merienda', cursive;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+@media (max-width: 768px) {
+    .header-brand {
+        font-size: 1.2rem;
+        left: 45%;
+    }
+    .language-selector {
+        margin-left: auto;
+        padding-left: 10px;
+    }
+}
+
 .globe-icon {
   width: 28px;
   height: 28px;
@@ -784,7 +813,7 @@ body {
         bottom: 1.5rem;
         right: 1.5rem;
     }
-    
+
     .music-toggle {
         width: 45px;
         height: 45px;
