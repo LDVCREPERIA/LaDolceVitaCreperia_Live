@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -6,9 +7,7 @@
     <title>Galerie - La Dolce Vita Creperia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
     <script src="swipe-navigation.js"></script>
 </head>
 <body>
@@ -43,44 +42,64 @@
 
     <main class="gallery-container">
         <h1>Galerie</h1>
-
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="20250405_150053.jpg" alt="La Dolce Vita Crêpe-Stand"></div>
-                <div class="swiper-slide"><img src="20250414_smarties.jpg" alt="La Dolce Vita Smarties Crêpe"></div>
-                <div class="swiper-slide"><img src="20250405_150501.jpg" alt="Leckere Crêpe-Kreation"></div>
-                <div class="swiper-slide"><img src="20250405_150513.jpg" alt="Crêpe-Stand bei einem Event"></div>
-                <div class="swiper-slide"><img src="20250405_150525.jpg" alt="Traditionelle Crêpe-Zubereitung"></div>
-                <div class="swiper-slide"><img src="attached_assets/20241107_200413.jpg" alt="Nachtservice"></div>
-                <div class="swiper-slide"><img src="attached_assets/Roberto1.jpg" alt="Roberto"></div>
-                <div class="swiper-slide"><img src="20250405_150514.jpg" alt="Fresh Crêpe Creation"></div>
-                <div class="swiper-slide"><img src="20250405_150521.jpg" alt="Crêpe Stand Setup"></div>
-                <div class="swiper-slide"><img src="attached_assets/20250414_185519.jpg" alt="La Dolce Vita Event Setup"></div>
-                <div class="swiper-slide"><img src="20250405_145909.jpg" alt="La Dolce Vita Setup"></div>
-                <div class="swiper-slide"><img src="20250405_145923.jpg" alt="La Dolce Vita Preparation"></div>
-                <div class="swiper-slide"><img src="attached_assets/20250405_145858.jpg" alt="La Dolce Vita Stand"></div>
-                <div class="swiper-slide"><img src="attached_assets/20250405_150125.jpg" alt="La Dolce Vita Service"></div>
-                <div class="swiper-slide"><img src="attached_assets/20250405_croped.jpg" alt="La Dolce Vita Overview"></div>
-                <div class="swiper-slide"><img src="file_0000000034e051fa956c634943602ed4_conversation_id=67f27ed9-4310-8007-9530-1ae64190bcfa&message_id=6a2a2c7a-0080-46a8-84a4-9b7f51b497ab.jpg" alt="La Dolce Vita Special"></div>
-                <div class="swiper-slide"><img src="file_0000000066ac5246bdfef7e15f0292ed_conversation_id=67f27ed9-4310-8007-9530-1ae64190bcfa&message_id=0feae0b5-0776-4c00-8333-364d634b2efd.jpg" alt="La Dolce Vita Creation"></div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="20250405_150053.jpg" alt="La Dolce Vita Crêpe-Stand">
+                <p class="image-caption">Unser Crêpe-Stand</p>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="gallery-item">
+                <img src="20250414_smarties.jpg" alt="La Dolce Vita Smarties Crêpe">
+                <p class="image-caption">Smarties Crêpe - Ein Favorit bei Jung und Alt</p>
+            </div>
+            <div class="gallery-item">
+                <img src="20250405_150501.jpg" alt="Leckere Crêpe-Kreation">
+                <p class="image-caption">Frisch zubereitete Crêpe-Kreation</p>
+            </div>
+            <div class="gallery-item">
+                <img src="20250405_150513.jpg" alt="Crêpe-Stand bei einem Event">
+                <p class="image-caption">Unser Stand bei einem Event</p>
+            </div>
+            <div class="gallery-item">
+                <img src="20250405_150525.jpg" alt="Traditionelle Crêpe-Zubereitung">
+                <p class="image-caption">Traditionelle Zubereitung</p>
+            </div>
+            <div class="gallery-item">
+                <img src="attached_assets/20241107_200413.jpg" alt="Nachtservice">
+                <p class="image-caption">Nachtservice</p>
+            </div>
+            <div class="gallery-item">
+                <img src="attached_assets/Roberto1.jpg" alt="Roberto">
+                <p class="image-caption">Roberto in Aktion</p>
+            </div>
+            <div class="gallery-item">
+                <img src="20250405_150514.jpg" alt="Fresh Crêpe Creation">
+                <p class="image-caption">Frische Crêpe-Kreation</p>
+            </div>
+            <div class="gallery-item">
+                <img src="20250405_150521.jpg" alt="Crêpe Stand Setup">
+                <p class="image-caption">Unser Stand Setup</p>
+            </div>
+            <div class="gallery-item">
+                <img src="attached_assets/20250414_185519.jpg" alt="La Dolce Vita Event Setup">
+                <p class="image-caption">Event Setup</p>
+            </div>
+            <div class="gallery-item">
+                <img src="20250405_145909.jpg" alt="La Dolce Vita Setup">
+                <p class="image-caption">La Dolce Vita Setup</p>
+            </div>
+            <div class="gallery-item">
+                <img src="20250405_145923.jpg" alt="La Dolce Vita Preparation">
+                <p class="image-caption">Vorbereitung</p>
+            </div>
         </div>
 
         <a href="index.html" class="home-btn">Home</a>
     </main>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
-        }
-
-        function toggleTranslateMenu() {
-            var el = document.getElementById("google_translate_element");
-            el.style.display = (el.style.display === "block") ? "none" : "block";
         }
 
         function vibrateFeedback(ms = 20) {
@@ -89,22 +108,31 @@
             }
         }
 
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            },
-            spaceBetween: 30,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            }
-        });
+        function changeLanguage(lang) {
+            const translations = {
+                "de": {
+                    "menu": "Menü",
+                    "about": "Über uns",
+                    "contact": "Kontakt",
+                    "book": "Jetzt buchen",
+                    "home": "Startseite"
+                },
+                "en": {
+                    "menu": "Menu",
+                    "about": "About Us",
+                    "contact": "Contact",
+                    "book": "Book Now",
+                    "home": "Home"
+                }
+            };
+
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.dataset.translate;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
     </script>
 </body>
 </html>
