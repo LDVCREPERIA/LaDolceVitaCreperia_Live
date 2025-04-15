@@ -810,7 +810,7 @@ body {
 
 .music-control {
     position: fixed;
-    bottom: calc(2rem + 240px);
+    bottom: calc(2rem + 360px);
     right: 2rem;
     z-index: 1000;
 }
