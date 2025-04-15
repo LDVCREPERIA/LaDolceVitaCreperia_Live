@@ -61,32 +61,23 @@ function handleSwipe() {
     if (nextIndex >= pages.length) nextIndex = 0; // Loop to start
   }
 
-  // Add animation class based on swipe direction
   const mainContent = document.querySelector('main') || document.body;
   const nextPage = pages[nextIndex];
   
-  // Preload next page
-  const preloadLink = document.createElement('link');
-  preloadLink.rel = 'prefetch';
-  preloadLink.href = nextPage;
-  document.head.appendChild(preloadLink);
+  // Add animation class based on swipe direction
+  const animationClass = swipeDistance > 0 ? 'slide-right' : 'slide-left';
+  mainContent.classList.add(animationClass);
 
-  // Create overlay
-  const overlay = document.createElement('div');
-  overlay.style.position = 'fixed';
-  overlay.style.top = '0';
-  overlay.style.left = '0';
-  overlay.style.width = '100%';
-  overlay.style.height = '100%';
-  overlay.style.backgroundColor = getComputedStyle(document.body).backgroundColor;
-  overlay.style.zIndex = '9998';
-  document.body.appendChild(overlay);
+  // Preload the next page
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.href = nextPage;
+  document.head.appendChild(link);
 
-  // Add animation class
-  mainContent.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
-  
-  // Navigate after brief animation
-  setTimeout(() => {
-    window.location.href = nextPage;
-  }, 150);
+  // Navigate after animation starts
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      window.location.href = nextPage;
+    }, 180);
+  });
 }
