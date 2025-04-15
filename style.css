@@ -877,7 +877,7 @@ body {
     transform: scale(1.1);
 }
 
-.social-icons a {
+.social-icons a.social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -886,7 +886,13 @@ body {
     border-radius: 50%;
     margin: 0 10px;
     font-size: 1.5rem;
-    font-family: 'Merienda', cursive;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-icons a.social-link:hover {
+    transform: scale(1.1);
 }
 
 .social-icons .fa-envelope {
