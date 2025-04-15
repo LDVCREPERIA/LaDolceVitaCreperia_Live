@@ -26,7 +26,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Page transition effect and existing touch event listeners
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.classList.add('fade-enter');
+  document.body.style.opacity = "1";
+  document.body.style.visibility = "visible";
   // Only attach listeners to main content, not navigation elements
   const mainContent = document.querySelector('main') || document.body;
 
@@ -65,7 +66,9 @@ function handleSwipe() {
   content.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
 
   // Wait for animation to complete before redirecting
-  setTimeout(() => {
+  requestAnimationFrame(() => {
+    content.style.opacity = "1";
+    content.style.visibility = "visible";
     window.location.href = pages[nextIndex];
-  }, 150);
+  });
 }

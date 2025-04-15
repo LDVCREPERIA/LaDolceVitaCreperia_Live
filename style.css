@@ -1,23 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-html {
+html, body {
   scroll-behavior: smooth;
   overscroll-behavior: contain;
   background-color: #003366;
-}
-
-body {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+  animation: none !important;
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
   font-family: 'Merienda', cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #003366;
 }
 
     .navbar {
