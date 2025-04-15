@@ -710,12 +710,18 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    pointer-events: auto;
-    display: inline-block;
+    display: block;
     width: 100%;
     box-sizing: border-box;
+    background: white;
     position: relative;
-    z-index: 5;
+    z-index: 10;
+}
+
+.nav-button:hover, .nav-button:active {
+    background-color: #ff9c00;
+    color: white;
+    transform: scale(1.05);
 }
 
 .nav-button:hover {
