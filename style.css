@@ -1404,9 +1404,10 @@ body {
     width: 100%;
     box-sizing: border-box;
     position: relative;
-    z-index: 10;
+    z-index: 100;
     margin-bottom: 1rem;
     background: white;
+    pointer-events: auto;
 }
 
 .swiper-button-next,
