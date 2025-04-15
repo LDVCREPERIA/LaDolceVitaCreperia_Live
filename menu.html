@@ -5,21 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menü - La Dolce Vita Creperia</title>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'de',
-                includedLanguages: 'de,en,it,fr,sq,tr,pt,es,sr,ar,uk',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="swipe-navigation.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <script src="swipe-navigation.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -38,10 +27,11 @@
             </select>
         </div>
     </div>
+
     <div class="nav-container">
-        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <nav class="nav-menu">
-            <button class="close-btn" onclick="toggleNav()">×</button>
+            <button class="close-btn" onclick="toggleNav(); vibrateFeedback(20)">×</button>
+            <div class="nav-menu-brand">La Dolce Vita</div>
             <a href="index.html">Home</a>
             <a href="ueber-uns.html">Über uns</a>
             <a href="menu.html">Menü</a>
@@ -50,6 +40,7 @@
             <a href="kontakt.html">Kontakt</a>
         </nav>
     </div>
+
     <main>
         <section id="menu" class="menu-grid">
             <h2>Unser Menü</h2>
@@ -95,11 +86,45 @@
             </div>
         </section>
     </main>
+
     <script>
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }
         
+        function vibrateFeedback(ms = 20) {
+            if (navigator.vibrate) {
+                navigator.vibrate(ms);
+            }
+        }
+
+        function changeLanguage(lang) {
+            const translations = {
+                "de": {
+                    "menu": "Menü",
+                    "about": "Über uns",
+                    "contact": "Kontakt",
+                    "book": "Jetzt buchen",
+                    "home": "Startseite"
+                },
+                "en": {
+                    "menu": "Menu",
+                    "about": "About Us",
+                    "contact": "Contact",
+                    "book": "Book Now",
+                    "home": "Home"
+                }
+                // Add other language translations as needed
+            };
+
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.dataset.translate;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
         window.onpageshow = function(event) {
             if (event.persisted) {
                 document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
