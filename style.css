@@ -723,13 +723,39 @@ body {
 }
 
 .language-selector {
-    position: fixed;
-    top: 18px;
-    right: 80px;
-    z-index: 1001;
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-left: auto;
+    padding-right: 16px;
+}
+
+.language-selector i {
+    color: #FFD700;
+}
+
+.language-selector select {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-family: 'Merienda', cursive;
+}
+
+.language-selector select option {
+    background: #003366;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        padding-right: 8px;
+    }
+    .header-brand {
+        font-size: 1.2rem;
+        margin: 0 auto;
+    }
 }
 
 .language-icon {
