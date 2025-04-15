@@ -72,10 +72,16 @@ function handleSwipe() {
 
   content.classList.add(swipeDistance > 0 ? 'slide-right' : 'slide-left');
 
-  // Wait for animation to complete before redirecting
-  requestAnimationFrame(() => {
-    setTimeout(() => {
-      window.location.href = nextPage;
-    }, 40);
-  });
+  // Preload and transition immediately
+  const content = document.createElement('div');
+  content.style.position = 'fixed';
+  content.style.top = '0';
+  content.style.left = '0';
+  content.style.width = '100%';
+  content.style.height = '100%';
+  content.style.backgroundColor = document.body.style.backgroundColor;
+  content.style.zIndex = '9998';
+  document.body.appendChild(content);
+  
+  window.location.href = nextPage;
 }
