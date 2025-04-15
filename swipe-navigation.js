@@ -53,5 +53,5 @@ function handleSwipe() {
   // Wait for animation to complete before redirecting
   setTimeout(() => {
     window.location.href = pages[nextIndex];
-  }, 300);
+  }, 150);
 }
