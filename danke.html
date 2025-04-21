@@ -14,11 +14,20 @@
         <div class="header-brand">La Dolce Vita</div>
         <div class="language-selector">
             <i class="fas fa-globe"></i>
-            <div id="google_translate_element"></div>
+            <select onChange="changeLanguage(this.value)">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="it">IT</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="pt">PT</option>
+                <option value="sq">SQ</option>
+                <option value="tr">TR</option>
+                <option value="uk">UK</option>
+            </select>
         </div>
     </div>
     <div class="nav-container">
-        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
             <a href="index.html">Home</a>
