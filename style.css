@@ -127,9 +127,13 @@ html, body {
         width: 100%;
         height: 100vh;
         background: white;
-        transition: left 0.3s ease-in-out;
+        padding-top: 88px;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Merienda', cursive !important;
         z-index: 1000;
-        padding-top: 80px;
         box-shadow: 2px 0 8px rgba(0,0,0,0.1);
     }
 
@@ -419,50 +423,10 @@ html, body {
 
 .contact-button i {
   margin-right: 8px;
-  transition: transform 0.2s ease;
-}
-
-.contact-button:hover i {
-  transform: scale(1.2);
 }
 
 .whatsapp {
   background-color: #25D366;
-}
-
-.phone-link {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.phone-link:hover {
-  color: #ff9c00;
-}
-
-.contact-info {
-  opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .contact-info,
-  .contact-button {
-    animation: none;
-    opacity: 1;
-  }
 }
 
 .instagram {
@@ -494,49 +458,10 @@ html, body {
 }
 
 .booking-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 0.6s ease-out forwards;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.booking-form:hover {
-    transform: translateY(-5px);
-}
-
-.booking-form input {
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.booking-form input:focus {
-    border-color: #003366;
-    box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.2);
-    outline: none;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .booking-form {
-        animation: none;
-        opacity: 1;
-        transform: none;
-    }
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .form-group {
@@ -604,55 +529,32 @@ html, body {
 }
 
 .thank-you-container {
-    text-align: center;
-    padding: 40px;
-    margin-top: 60px;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.thank-you-content {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    width: 90%;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
+    margin: 100px auto 40px;
+    padding: 20px;
+    text-align: center;
 }
 
-.thank-you-content h2 {
-    color: #003366;
-    margin-bottom: 1.5rem;
+.thank-you-container h2 {
+    color: #ff9c00;
+    margin-bottom: 20px;
+    font-family: 'Merienda', cursive;
 }
 
-.thank-you-content p {
-    color: #666;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.back-button {
+.thank-you-container .back-button {
     display: inline-block;
+    margin-top: 30px;
     padding: 12px 24px;
-    background-color: #003366;
+    background-color: #ff9c00;
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    font-family: 'Merienda', cursive;
 }
 
-.back-button:hover {
-    background-color: #004080;
-    transform: translateY(-2px);
-}
-
-.back-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.3);
+.thank-you-container .back-button:hover {
+    background-color: #e68a00;
 }
 
 @media (max-width: 768px) {
@@ -790,14 +692,6 @@ body {
     opacity: 1 !important;
     visibility: visible !important;
     min-height: 100vh;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content-visibility: auto;
-    contain: content;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 .button {
           background-color: #0e5ba9;
@@ -1152,7 +1046,8 @@ body {
     position: relative;
     z-index: 100;
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
 .social-icons a.social-link:hover {
     transform: scale(1.1);
@@ -1214,27 +1109,10 @@ body {
     }
 }
 
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #003366;
-    color: white;
-    padding: 8px;
-    z-index: 1001;
-    transition: top 0.3s;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
@@ -1279,22 +1157,6 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform;
-    backface-visibility: hidden;
-    contain: paint;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .gallery-item img {
-        transition: none;
-    }
-}
-
-@supports (content-visibility: auto) {
-    .gallery-item img {
-        content-visibility: auto;
-        contain-intrinsic-size: 0 300px;
-    }
 }
 
 .gallery-item:hover img {
@@ -1411,17 +1273,9 @@ body {
 }
 
 
-.menu-content {
-    max-width: 800px;
-    margin: 80px auto 40px;
-    padding: 20px;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
 .menu-grid {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 80px auto 40px;
     padding: 20px;
     font-family: 'Merienda', cursive;
     display: flex;
@@ -1833,57 +1687,20 @@ body {
     color: #ff9c00;
     text-decoration: none;
     font-size: 1.5rem;
-    padding: 1.2rem;
+    padding: 1rem 2rem;
     border: 2px solid #ff9c00;
-    border-radius: 12px;
-    text-align: left;
+    border-radius: 8px;
+    text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 100%;
     box-sizing: border-box;
     position: relative;
     z-index: 100;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     background: white;
     pointer-events: auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.nav-button .button-text {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-}
-
-.nav-button .button-description {
-    font-size: 0.9rem;
-    color: #666;
-    opacity: 0.9;
-}
-
-.nav-button:hover,
-.nav-button:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    border-color: #ff9c00;
-    outline: none;
-}
-
-.nav-button:hover .button-description,
-.nav-button:focus .button-description {
-    opacity: 1;
-    color: #ff9c00;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .nav-button {
-        transition: none;
-    }
-    .nav-button:hover,
-    .nav-button:focus {
-        transform: none;
-    }
 }
 
 .swiper-button-next,
