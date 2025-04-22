@@ -83,24 +83,25 @@
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }
-    <script>
+    </script>
+    <script type="text/javascript">
         function validateForm() {
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const date = document.getElementById('date').value;
-            
+
             if (!name || !phone || !date) {
                 alert(i18next.t('form_validation_error', 'Please fill in all required fields'));
                 return false;
             }
-            
+
             const selectedDate = new Date(date);
             const today = new Date();
             if (selectedDate < today) {
                 alert(i18next.t('date_validation_error', 'Please select a future date'));
                 return false;
             }
-            
+
             return true;
         }
     </script>
