@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="thank_you">Vielen Dank - La Dolce Vita Creperia</title>
+    <title>Danke - La Dolce Vita Creperia</title>
     <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="js/i18n.js"></script>
@@ -13,11 +14,11 @@
 </head>
 <body>
     <div class="navbar">
-        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
+        <button class="hamburger-btn" onclick="toggleNav()" aria-label="Toggle navigation menu">☰</button>
         <div class="header-brand">La Dolce Vita</div>
         <div class="language-selector">
-            <i class="fas fa-globe"></i>
-            <select onChange="changeLanguage(this.value)">
+            <i class="fas fa-globe" aria-hidden="true"></i>
+            <select onChange="changeLanguage(this.value)" aria-label="Select language">
                 <option value="de">DE</option>
                 <option value="en">EN</option>
             </select>
@@ -25,8 +26,8 @@
     </div>
 
     <div class="nav-container">
-        <nav class="nav-menu">
-            <button class="close-btn" onclick="toggleNav()">×</button>
+        <nav class="nav-menu" role="navigation">
+            <button class="close-btn" onclick="toggleNav()" aria-label="Close navigation menu">×</button>
             <div class="nav-menu-brand">La Dolce Vita</div>
             <a href="index.html" data-i18n="home">Startseite</a>
             <a href="ueber-uns.html" data-i18n="about">Über uns</a>
@@ -37,16 +38,29 @@
         </nav>
     </div>
 
-    <main class="thank-you-container" role="main">
-        <div class="thank-you-content fade-in">
-            <h2 data-i18n="thank_you" class="animate-in">Vielen Dank für Ihre Anfrage!</h2>
-            <p data-i18n="thank_you_message" class="animate-in" style="animation-delay: 0.3s">Wir melden uns bald, um alle Details mit Ihnen zu besprechen.</p>
-            <a href="index.html" class="back-button animate-in" data-i18n="back_to_home" style="animation-delay: 0.6s" role="button">Zurück zur Startseite</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content" class="thank-you-container" role="main">
+        <div class="thank-you-content animate-in">
+            <h1 data-i18n="thank_you.title" class="fade-in" tabindex="0">Vielen Dank!</h1>
+            <p data-i18n="thank_you.message" class="fade-in" style="animation-delay: 0.2s" tabindex="0">
+                Wir haben Ihre Anfrage erhalten und werden uns schnellstmöglich bei Ihnen melden.
+            </p>
+            <div class="button-container fade-in" style="animation-delay: 0.4s">
+                <a href="index.html" class="back-button animate-in" data-i18n="thank_you.back_home">
+                    Zurück zur Startseite
+                </a>
+                <a href="kontakt.html" class="contact-button animate-in" style="animation-delay: 0.2s" data-i18n="thank_you.contact">
+                    Kontakt aufnehmen
+                </a>
+            </div>
         </div>
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', initI18n);
+        document.addEventListener('DOMContentLoaded', () => {
+            initI18n();
+            document.querySelector('.thank-you-content').style.opacity = '1';
+        });
 
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
