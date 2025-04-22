@@ -1424,6 +1424,8 @@ body {
 .about-hero {
     margin-top: 64px;
     width: 100%;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
 .hero-img {
@@ -1433,6 +1435,21 @@ body {
     max-height: 420px;
     display: block;
     margin-bottom: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-hero,
+    .animate-in {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
 }
 
 .about-content {
