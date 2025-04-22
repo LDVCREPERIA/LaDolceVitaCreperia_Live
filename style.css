@@ -127,13 +127,9 @@ html, body {
         width: 100%;
         height: 100vh;
         background: white;
-        padding-top: 88px;
-        transition: 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: 'Merienda', cursive !important;
+        transition: left 0.3s ease-in-out;
         z-index: 1000;
+        padding-top: 80px;
         box-shadow: 2px 0 8px rgba(0,0,0,0.1);
     }
 
@@ -1120,8 +1116,7 @@ body {
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    .music-control {
+@media (max-width: 768px) {    .music-control {
         bottom: 1.5rem;
         right: 1.5rem;
     }

@@ -42,7 +42,7 @@
 </head>
 <body>
     <div class="navbar">
-        <button class="hamburger-btn" >☰</button>
+        <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <div class="header-brand">La Dolce Vita</div>
         <div class="language-selector">
             <i class="fas fa-globe"></i>
@@ -70,7 +70,7 @@
 
     <div class="nav-container">
         <nav class="nav-menu">
-            <button class="close-btn">×</button>
+            <button class="close-btn" onclick="toggleNav()">×</button>
             <div class="nav-menu-brand">La Dolce Vita</div>
             <a href="index.html" data-translate="home">Home</a>
             <a href="ueber-uns.html" data-translate="about">Über uns</a>
@@ -157,6 +157,13 @@
     </footer>
 
     <script>
+    function toggleNav() {
+        const menu = document.querySelector('.nav-menu');
+        const hamburger = document.querySelector('.hamburger-btn');
+        menu.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', menu.classList.contains('active'));
+    }
+
     async function initializeAudio() {
         const music = document.getElementById("bg-music");
         const button = document.querySelector('.music-toggle');
@@ -188,24 +195,15 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        initI18n();
+    document.addEventListener('DOMContentLoaded', initI18n);
 
-        // Setup hamburger menu functionality
-        const hamburgerBtn = document.querySelector('.hamburger-btn');
-        const closeBtn = document.querySelector('.close-btn');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburgerBtn.addEventListener('click', () => {
-            navMenu.classList.add('active');
+    function changeLanguage(lang) {
+        i18next.changeLanguage(lang).then(() => {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = i18next.t(key);
+            });
         });
-
-        closeBtn.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
-
-        var translations = {
             "de": {
                 "welcome": "Willkommen bei La Dolce Vita Creperia",
                 "subtitle": "Die besten Crêpes in der Schweiz",
@@ -295,14 +293,8 @@
         }
     }
 
-
-    function changeLanguage(lang) {
-        i18next.changeLanguage(lang).then(() => {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                element.textContent = i18next.t(key);
-            });
-        });
+    function toggleNav() {
+        document.querySelector('.nav-menu').classList.toggle('active');
     }
 
         window.onpageshow = function(event) {
