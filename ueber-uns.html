@@ -4,33 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über uns – La Dolce Vita</title>
-    <style>
-        #google_translate_element {
-            z-index: 9999;
-            position: relative;
-        }
-        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
-            display: none !important;
-        }
-    </style>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'de',
-                includedLanguages: 'de,en,fr,it,tr,sq,es,pt',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="swipe-navigation.js"></script>
 </head>
 <body>
-    <div id="google_translate_element"></div>
     <div class="navbar">
         <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <div class="header-brand">La Dolce Vita</div>
@@ -39,43 +21,37 @@
             <select onChange="changeLanguage(this.value)">
                 <option value="de">DE</option>
                 <option value="en">EN</option>
-                <option value="it">IT</option>
-                <option value="fr">FR</option>
-                <option value="es">ES</option>
-                <option value="pt">PT</option>
-                <option value="sq">SQ</option>
             </select>
         </div>
     </div>
     <div class="nav-container">
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
-            <a href="index.html">Home</a>
-            <a href="ueber-uns.html">Über uns</a>
-            <a href="menu.html">Menü</a>
-            <a href="gallery.html">Galerie</a>
-            <a href="booking.html">Jetzt Buchen</a>
-            <a href="kontakt.html">Kontakt</a>
+            <div class="nav-menu-brand">La Dolce Vita</div>
+            <a href="index.html" data-i18n="home">Startseite</a>
+            <a href="ueber-uns.html" data-i18n="about">Über uns</a>
+            <a href="menu.html" data-i18n="menu">Menü</a>
+            <a href="gallery.html" data-i18n="gallery">Galerie</a>
+            <a href="booking.html" data-i18n="book_now">Jetzt Buchen</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakt</a>
         </nav>
     </div>
 
     <section class="about-hero">
-        <img src="attached_assets/20250405_croped.jpg" alt="La Dolce Vita Stand" class="hero-img" />
+        <img src="attached_assets/20250405_croped.jpg" alt="La Dolce Vita Stand" class="hero-img" data-i18n="[alt]about.stand_image" />
     </section>
 
     <section class="about-content">
-        <h2>Über uns</h2>
-
-        <p>La Dolce Vita ist ein Familienbetrieb, gegründet von Roberto Polimeno. Seine Leidenschaft ist, Menschen ein Lächeln ins Gesicht zu zaubern – mit jedem Bissen. Roberto verwendet ausschließlich natürliche Zutaten aus der Region.</p>
-
-        <img src="attached_assets/20250405_150125.jpg" alt="Roberto preparing crêpes" class="about-img-wrap" />
-
-        <p>Die Teigmischung wird täglich frisch angerührt und jede Crêpe wird direkt vor Ihren Augen zubereitet – mit Liebe, Handwerkskunst und einem Rezept, das seit über 80 Jahren in seiner Familie weitergegeben wird. Die Rezeptur stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.</p>
-
-        <img src="attached_assets/Roberto1.jpg" alt="Roberto Polimeno" class="portrait-img" />
+        <h2 data-i18n="about.title">Über uns</h2>
+        <p data-i18n="about.description">La Dolce Vita ist ein Familienbetrieb, gegründet von Roberto Polimeno. Seine Leidenschaft ist, Menschen ein Lächeln ins Gesicht zu zaubern – mit jedem Bissen. Roberto verwendet ausschließlich natürliche Zutaten aus der Region.</p>
+        <img src="attached_assets/20250405_150125.jpg" alt="Roberto preparing crêpes" class="about-img-wrap" data-i18n="[alt]about.roberto_preparing" />
+        <p data-i18n="about.tradition">Die Teigmischung wird täglich frisch angerührt und jede Crêpe wird direkt vor Ihren Augen zubereitet – mit Liebe, Handwerkskunst und einem Rezept, das seit über 80 Jahren in seiner Familie weitergegeben wird. Die Rezeptur stammt aus Cursi, einer kleinen Stadt in Puglia, im Süden Italiens – berühmt für ihre traditionelle Crêpe-Kunst.</p>
+        <img src="attached_assets/Roberto1.jpg" alt="Roberto Polimeno" class="portrait-img" data-i18n="[alt]about.roberto_portrait" />
     </section>
 
     <script>
+        document.addEventListener('DOMContentLoaded', initI18n);
+
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }

@@ -30,5 +30,17 @@
   "event_type": "Event Type",
   "guests": "Number of Guests",
   "date": "Desired Date",
-  "send_request": "Send Request"
+  "send_request": "Send Request",
+  "about": {
+    "title": "About Us",
+    "description": "La Dolce Vita is a family business, founded by Roberto Polimeno. His passion is to bring a smile to people's faces - with every bite. Roberto uses only natural ingredients from the region.",
+    "tradition": "The dough mixture is freshly prepared daily and each crêpe is prepared right in front of your eyes - with love, craftsmanship and a recipe that has been passed down in his family for over 80 years. The recipe comes from Cursi, a small town in Puglia, in southern Italy - famous for its traditional crêpe art.",
+    "stand_image": "La Dolce Vita Stand",
+    "roberto_preparing": "Roberto preparing crêpes",
+    "roberto_portrait": "Roberto Polimeno Portrait"
+  },
+  "contact": {
+    "title": "Contact",
+    "phone": "Phone"
+  }
 }
