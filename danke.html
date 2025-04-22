@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danke - La Dolce Vita Creperia</title>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n.js"></script>
     <style>
         #google_translate_element {
             z-index: 9999;
@@ -60,12 +63,14 @@
     </div>
 
     <main class="thank-you-container">
-        <h2>Vielen Dank für Ihre Anfrage!</h2>
-        <p>Wir melden uns bald, um alle Details mit Ihnen zu besprechen.</p>
-        <a href="index.html" class="back-button">Zurück zur Startseite</a>
+        <h2 data-i18n="thank_you">Vielen Dank für Ihre Anfrage!</h2>
+        <p data-i18n="thank_you_message">Wir melden uns bald, um alle Details mit Ihnen zu besprechen.</p>
+        <a href="index.html" class="back-button" data-i18n="back_to_home">Zurück zur Startseite</a>
     </main>
 
     <script>
+        document.addEventListener('DOMContentLoaded', initI18n);
+        
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }

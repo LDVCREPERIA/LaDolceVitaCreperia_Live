@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menü - La Dolce Vita Creperia</title>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n.js"></script>
     <style>
         #google_translate_element {
             z-index: 9999;
@@ -42,12 +45,12 @@
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
             <div class="nav-menu-brand">La Dolce Vita</div>
-            <a href="index.html">Home</a>
-            <a href="ueber-uns.html">Über uns</a>
-            <a href="menu.html">Menü</a>
-            <a href="gallery.html">Galerie</a>
-            <a href="booking.html">Jetzt Buchen</a>
-            <a href="kontakt.html">Kontakt</a>
+            <a href="index.html" data-i18n="home">Home</a>
+            <a href="ueber-uns.html" data-i18n="about">Über uns</a>
+            <a href="menu.html" data-i18n="menu">Menü</a>
+            <a href="gallery.html" data-i18n="gallery">Galerie</a>
+            <a href="booking.html" data-i18n="book_now">Jetzt Buchen</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakt</a>
         </nav>
     </div>
 
@@ -98,6 +101,8 @@
     </main>
 
     <script>
+        document.addEventListener('DOMContentLoaded', initI18n);
+        
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }

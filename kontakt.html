@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - La Dolce Vita Creperia</title>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n.js"></script>
     <style>
         #google_translate_element {
             z-index: 9999;
@@ -83,6 +86,8 @@
     </main>
 
     <script>
+        document.addEventListener('DOMContentLoaded', initI18n);
+        
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }

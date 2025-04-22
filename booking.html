@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buchung - La Dolce Vita Creperia</title>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n.js"></script>
     <style>
         #google_translate_element {
             z-index: 9999;
@@ -64,9 +67,9 @@
     </div>
 
     <main class="booking-container">
-        <h1>Buchungsanfrage</h1>
+        <h1 data-i18n="booking_request">Buchungsanfrage</h1>
         <div class="form-intro">
-            <p>Füllen Sie unser Buchungsformular aus und wir melden uns schnellstmöglich bei Ihnen, um Ihr Event abzustimmen.</p>
+            <p data-i18n="form_intro">Füllen Sie unser Buchungsformular aus und wir melden uns schnellstmöglich bei Ihnen, um Ihr Event abzustimmen.</p>
         </div>
         <form class="booking-form" action="https://formsubmit.co/ldvcreperia@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
@@ -129,6 +132,8 @@
     </main>
 
     <script>
+        document.addEventListener('DOMContentLoaded', initI18n);
+        
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
         }
