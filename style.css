@@ -458,10 +458,49 @@ html, body {
 }
 
 .booking-form {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.6s ease-out forwards;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.booking-form:hover {
+    transform: translateY(-5px);
+}
+
+.booking-form input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form input:focus {
+    border-color: #003366;
+    box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.2);
+    outline: none;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .booking-form {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .form-group {
@@ -529,32 +568,55 @@ html, body {
 }
 
 .thank-you-container {
-    max-width: 600px;
-    margin: 100px auto 40px;
-    padding: 20px;
     text-align: center;
+    padding: 40px;
+    margin-top: 60px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.thank-you-container h2 {
-    color: #ff9c00;
-    margin-bottom: 20px;
-    font-family: 'Merienda', cursive;
+.thank-you-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
-.thank-you-container .back-button {
+.thank-you-content h2 {
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-content p {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.back-button {
     display: inline-block;
-    margin-top: 30px;
     padding: 12px 24px;
-    background-color: #ff9c00;
+    background-color: #003366;
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: background-color 0.3s ease;
-    font-family: 'Merienda', cursive;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.thank-you-container .back-button:hover {
-    background-color: #e68a00;
+.back-button:hover {
+    background-color: #004080;
+    transform: translateY(-2px);
+}
+
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -1046,8 +1108,7 @@ body {
     position: relative;
     z-index: 100;
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
 
 .social-icons a.social-link:hover {
     transform: scale(1.1);

@@ -38,11 +38,11 @@
         </nav>
     </div>
 
-    <main class="booking-container">
-        <h1 data-i18n="booking_request">Buchungsanfrage</h1>
-        <p data-i18n="form_intro">Füllen Sie unser Buchungsformular aus und wir melden uns schnellstmöglich bei Ihnen.</p>
+    <main class="booking-container" role="main">
+        <h1 data-i18n="booking_request" class="fade-in">Buchungsanfrage</h1>
+        <p data-i18n="form_intro" class="fade-in" style="animation-delay: 0.2s">Füllen Sie unser Buchungsformular aus und wir melden uns schnellstmöglich bei Ihnen.</p>
 
-        <form action="danke.html" method="GET" class="booking-form" onsubmit="return validateForm()">
+        <form action="danke.html" method="GET" class="booking-form animate-in" onsubmit="return validateForm()" role="form" aria-label="Booking Form">
             <div class="form-group">
                 <label for="name" data-i18n="name">Name</label>
                 <input type="text" id="name" name="name" required>
