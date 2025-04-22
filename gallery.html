@@ -1,37 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie - La Dolce Vita Creperia</title>
-    <style>
-        #google_translate_element {
-            z-index: 9999;
-            position: relative;
-        }
-        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
-            display: none !important;
-        }
-    </style>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'de',
-                includedLanguages: 'de,en,fr,it,tr,sq,es,pt',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="swipe-navigation.js"></script>
 </head>
 <body>
-    <div id="google_translate_element"></div>
     <div class="navbar">
         <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <div class="header-brand">La Dolce Vita</div>
@@ -40,11 +20,6 @@
             <select onChange="changeLanguage(this.value)">
                 <option value="de">DE</option>
                 <option value="en">EN</option>
-                <option value="it">IT</option>
-                <option value="fr">FR</option>
-                <option value="es">ES</option>
-                <option value="pt">PT</option>
-                <option value="sq">SQ</option>
             </select>
         </div>
     </div>
@@ -52,106 +27,81 @@
     <div class="nav-container">
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
-            <a href="index.html">Home</a>
-            <a href="ueber-uns.html">Über uns</a>
-            <a href="menu.html">Menü</a>
-            <a href="gallery.html">Galerie</a>
-            <a href="booking.html">Jetzt Buchen</a>
-            <a href="kontakt.html">Kontakt</a>
+            <div class="nav-menu-brand">La Dolce Vita</div>
+            <a href="index.html" data-i18n="home">Startseite</a>
+            <a href="ueber-uns.html" data-i18n="about">Über uns</a>
+            <a href="menu.html" data-i18n="menu">Menü</a>
+            <a href="gallery.html" data-i18n="gallery">Galerie</a>
+            <a href="booking.html" data-i18n="book_now">Jetzt Buchen</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakt</a>
         </nav>
     </div>
 
     <main class="gallery-container">
-        <h1 style="text-align: center; margin-bottom: 2rem;">Galerie</h1>
-        
+        <h1 data-i18n="gallery">Galerie</h1>
+
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="20250405_150053.jpg" alt="La Dolce Vita Crêpe-Stand" loading="lazy" decoding="async">
-                <p class="image-caption">Unser Crêpe-Stand</p>
+                <p class="image-caption" data-i18n="gallery.stand">Unser Crêpe-Stand</p>
             </div>
             <div class="gallery-item">
                 <img src="20250414_smarties.jpg" alt="La Dolce Vita Smarties Crêpe">
-                <p class="image-caption">Smarties Crêpe - Ein Favorit bei Jung und Alt</p>
+                <p class="image-caption" data-i18n="gallery.smarties">Smarties Crêpe - Ein Favorit bei Jung und Alt</p>
             </div>
             <div class="gallery-item">
                 <img src="20250405_150501.jpg" alt="Leckere Crêpe-Kreation">
-                <p class="image-caption">Frisch zubereitete Crêpe-Kreation</p>
+                <p class="image-caption" data-i18n="gallery.fresh">Frisch zubereitete Crêpe-Kreation</p>
             </div>
             <div class="gallery-item">
                 <img src="20250405_150513.jpg" alt="Crêpe-Stand bei einem Event">
-                <p class="image-caption">Unser Stand bei einem Event</p>
+                <p class="image-caption" data-i18n="gallery.event">Unser Stand bei einem Event</p>
             </div>
             <div class="gallery-item">
                 <img src="20250405_150525.jpg" alt="Traditionelle Crêpe-Zubereitung">
-                <p class="image-caption">Traditionelle Zubereitung</p>
+                <p class="image-caption" data-i18n="gallery.traditional">Traditionelle Zubereitung</p>
             </div>
             <div class="gallery-item">
                 <img src="attached_assets/20241107_200413.jpg" alt="Nachtservice">
-                <p class="image-caption">Nachtservice</p>
+                <p class="image-caption" data-i18n="gallery.night">Nachtservice</p>
             </div>
             <div class="gallery-item">
                 <img src="attached_assets/Roberto1.jpg" alt="Roberto">
-                <p class="image-caption">Roberto in Aktion</p>
+                <p class="image-caption" data-i18n="gallery.roberto">Roberto in Aktion</p>
             </div>
             <div class="gallery-item">
                 <img src="20250405_150514.jpg" alt="Frisch zubereitete Crêpe">
-                <p class="image-caption">Frisch zubereitete Spezial-Crêpe</p>
+                <p class="image-caption" data-i18n="gallery.special">Frisch zubereitete Spezial-Crêpe</p>
             </div>
             <div class="gallery-item">
                 <img src="20250405_150521.jpg" alt="La Dolce Vita Stand">
-                <p class="image-caption">Unser professioneller Crêpe-Stand</p>
+                <p class="image-caption" data-i18n="gallery.prostand">Unser professioneller Crêpe-Stand</p>
             </div>
             <div class="gallery-item">
                 <img src="attached_assets/20250414_185519.jpg" alt="La Dolce Vita Event Setup">
-                <p class="image-caption">Event Setup</p>
+                <p class="image-caption" data-i18n="gallery.eventsetup">Event Setup</p>
             </div>
             <div class="gallery-item">
                 <img src="20250405_145909.jpg" alt="La Dolce Vita Setup">
-                <p class="image-caption">La Dolce Vita Setup</p>
+                <p class="image-caption" data-i18n="gallery.setup">La Dolce Vita Setup</p>
             </div>
             <div class="gallery-item">
                 <img src="20250405_145923.jpg" alt="La Dolce Vita Preparation">
-                <p class="image-caption">Vorbereitung</p>
+                <p class="image-caption" data-i18n="gallery.preparation">Vorbereitung</p>
             </div>
         </div>
 
         <div class="button-container">
-            <a href="index.html" class="home-btn">Home</a>
-            <a href="booking.html" class="book-now-btn">Jetzt Buchen</a>
+            <a href="index.html" class="home-btn" data-i18n="home">Home</a>
+            <a href="booking.html" class="book-now-btn" data-i18n="book_now">Jetzt Buchen</a>
         </div>
     </main>
 
     <script>
+        document.addEventListener('DOMContentLoaded', initI18n);
+
         function toggleNav() {
             document.querySelector('.nav-menu').classList.toggle('active');
-        }
-
-        
-
-        function changeLanguage(lang) {
-            const translations = {
-                "de": {
-                    "menu": "Menü",
-                    "about": "Über uns",
-                    "contact": "Kontakt",
-                    "book": "Jetzt buchen",
-                    "home": "Startseite"
-                },
-                "en": {
-                    "menu": "Menu",
-                    "about": "About Us",
-                    "contact": "Contact",
-                    "book": "Book Now",
-                    "home": "Home"
-                }
-            };
-
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.dataset.translate;
-                if (translations[lang] && translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
         }
     </script>
 </body>

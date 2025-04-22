@@ -1,5 +1,14 @@
 
 {
+  "gallery": {
+    "stand": "Our Crêpe Stand",
+    "smarties": "Smarties Crêpe - A Favorite for All Ages",
+    "fresh": "Freshly Prepared Crêpe Creation",
+    "event": "Our Stand at an Event",
+    "traditional": "Traditional Preparation",
+    "night": "Night Service",
+    "roberto": "Roberto in Action"
+  },
   "welcome": "Welcome to La Dolce Vita Creperia",
   "subtitle": "The best Crêpes in Switzerland - an authentic Italian crêpe experience",
   "home": "Home",
