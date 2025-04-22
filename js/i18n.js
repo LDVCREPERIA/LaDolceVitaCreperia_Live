@@ -59,7 +59,18 @@ function updateLanguageSelector() {
 
 function changeLanguage(lang) {
   i18next.changeLanguage(lang).then(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = ['ar', 'he', 'fa'].includes(lang) ? 'rtl' : 'ltr';
     updatePageContent();
     updateLanguageSelector();
+    localStorage.setItem('preferred-language', lang);
   });
 }
+
+// Initialize with stored language preference
+document.addEventListener('DOMContentLoaded', () => {
+  const storedLang = localStorage.getItem('preferred-language');
+  if (storedLang) {
+    changeLanguage(storedLang);
+  }
+});
