@@ -1116,7 +1116,8 @@ body {
     opacity: 1;
 }
 
-@media (max-width: 768px) {    .music-control {
+@media (max-width: 768px) {
+    .music-control {
         bottom: 1.5rem;
         right: 1.5rem;
     }
