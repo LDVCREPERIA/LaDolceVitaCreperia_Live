@@ -1170,10 +1170,27 @@ body {
     }
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #003366;
+    color: white;
+    padding: 8px;
+    z-index: 1001;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
@@ -1334,9 +1351,17 @@ body {
 }
 
 
-.menu-grid {
+.menu-content {
     max-width: 800px;
     margin: 80px auto 40px;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.menu-grid {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
     font-family: 'Merienda', cursive;
     display: flex;

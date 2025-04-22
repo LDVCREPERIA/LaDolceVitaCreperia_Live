@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="navbar">
         <button class="hamburger-btn" onclick="toggleNav()">☰</button>
         <div class="header-brand">La Dolce Vita</div>
@@ -42,7 +43,8 @@
             <h2 data-i18n="our_menu" class="menu-title animate-in">Unser Menü</h2>
             <p class="menu-subtitle animate-in" data-i18n="menu.subtitle" style="animation-delay: 0.2s">Entdecken Sie unsere köstlichen Kreationen</p>
 
-            <div class="menu-item">
+            <main id="main-content" class="menu-content fade-in" role="main">
+            <div class="menu-item animate-in" style="animation-delay: 0.2s">
                 <h3 data-i18n="menu.nutella">Crêpe mit Nutella</h3>
                 <p data-i18n="menu.nutella_desc">Der Klassiker – purer Genuss mit cremigem Nutella.</p>
             </div>
