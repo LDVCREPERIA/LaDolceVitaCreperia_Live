@@ -72,12 +72,12 @@
         <nav class="nav-menu">
             <button class="close-btn" onclick="toggleNav()">×</button>
             <div class="nav-menu-brand">La Dolce Vita</div>
-            <a href="index.html" data-translate="home">Home</a>
-            <a href="ueber-uns.html" data-translate="about">Über uns</a>
-            <a href="menu.html" data-translate="menu">Menü</a>
-            <a href="gallery.html" data-translate="gallery">Galerie</a>
-            <a href="booking.html" data-translate="book">Jetzt Buchen</a>
-            <a href="kontakt.html" data-translate="contact">Kontakt</a>
+            <a href="index.html" data-i18n="home">Home</a>
+            <a href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
+            <a href="menu.html" data-i18n="nav.menu">Menü</a>
+            <a href="gallery.html" data-i18n="nav.gallery">Galerie</a>
+            <a href="booking.html" data-i18n="nav.book">Jetzt Buchen</a>
+            <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
         </nav>
     </div>
 
@@ -99,35 +99,35 @@
             <nav class="nav-buttons" role="navigation">
                 <a href="ueber-uns.html" 
                    class="nav-button animate-in" 
-                   data-translate="about" 
+                   data-i18n="nav.about" 
                    style="animation-delay: 0.3s">
                     <span class="button-text">Über uns</span>
                     <span class="button-description" data-i18n="nav.about_desc">Erfahren Sie mehr über unsere Geschichte</span>
                 </a>
                 <a href="menu.html" 
                    class="nav-button animate-in" 
-                   data-translate="menu"
+                   data-i18n="nav.menu"
                    style="animation-delay: 0.4s">
                     <span class="button-text">Menü</span>
                     <span class="button-description" data-i18n="nav.menu_desc">Entdecken Sie unsere Spezialitäten</span>
                 </a>
                 <a href="gallery.html" 
                    class="nav-button animate-in" 
-                   data-translate="gallery"
+                   data-i18n="nav.gallery"
                    style="animation-delay: 0.5s">
                     <span class="button-text">Galerie</span>
                     <span class="button-description" data-i18n="nav.gallery_desc">Sehen Sie unsere Kreationen</span>
                 </a>
                 <a href="booking.html" 
                    class="nav-button animate-in" 
-                   data-translate="book"
+                   data-i18n="nav.book"
                    style="animation-delay: 0.6s">
                     <span class="button-text">Book Us Now</span>
                     <span class="button-description" data-i18n="nav.book_desc">Reservieren Sie für Ihren Event</span>
                 </a>
                 <a href="kontakt.html" 
                    class="nav-button animate-in" 
-                   data-translate="contact"
+                   data-i18n="nav.contact"
                    style="animation-delay: 0.7s">
                     <span class="button-text">Kontakt Info</span>
                     <span class="button-description" data-i18n="nav.contact_desc">Sprechen Sie mit uns</span>
@@ -137,7 +137,7 @@
     </main>
 
     <div class="cta-section">
-        <a href="booking.html" class="cta-button" data-translate="book">Jetzt buchen</a>
+        <a href="booking.html" class="cta-button" data-i18n="nav.book">Jetzt buchen</a>
     </div>
     <footer>
         <div class="social-icons">
@@ -203,19 +203,152 @@
                 const key = element.getAttribute('data-i18n');
                 element.textContent = i18next.t(key);
             });
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.dataset.translate;
-                element.textContent = i18next.t(key);
-            });
+        });
+            "de": {
+                "welcome": "Willkommen bei La Dolce Vita Creperia",
+                "subtitle": "Die besten Crêpes in der Schweiz",
+                "nav": {
+                    "about": "Über uns",
+                    "menu": "Menü",
+                    "gallery": "Galerie",
+                    "contact": "Kontakt",
+                    "book": "Jetzt buchen",
+                    "about_desc": "Erfahren Sie mehr über unsere Geschichte",
+                    "menu_desc": "Entdecken Sie unsere Spezialitäten",
+                    "gallery_desc": "Sehen Sie unsere Kreationen",
+                    "contact_desc": "Sprechen Sie mit uns",
+                    "book_desc": "Reservieren Sie für Ihren Event"
+                },
+                "home": "Startseite"
+            },
+            "en": {
+                "welcome": "Welcome to La Dolce Vita Creperia",
+                "subtitle": "The best Crêpes in Switzerland",
+                "nav": {
+                    "about": "About Us",
+                    "menu": "Menu",
+                    "gallery": "Gallery",
+                    "contact": "Contact",
+                    "book": "Book Now",
+                    "about_desc": "Learn more about our history",
+                    "menu_desc": "Discover our specialties",
+                    "gallery_desc": "See our creations",
+                    "contact_desc": "Talk to us",
+                    "book_desc": "Book for your event"
+                },
+                "home": "Home"
+            },
+            "it": {
+                "welcome": "Benvenuti alla La Dolce Vita Creperia",
+                "subtitle": "Le migliori crêpes in Svizzera",
+                "nav": {
+                    "about": "Chi Siamo",
+                    "menu": "Menù",
+                    "gallery": "Galleria",
+                    "contact": "Contatto",
+                    "book": "Prenota Ora",
+                    "about_desc": "Scopri di più sulla nostra storia",
+                    "menu_desc": "Scopri le nostre specialità",
+                    "gallery_desc": "Guarda le nostre creazioni",
+                    "contact_desc": "Parla con noi",
+                    "book_desc": "Prenota per il tuo evento"
+                },
+                "home": "Home"
+            },
+            "fr": {
+                "welcome": "Bienvenue à La Dolce Vita Creperia",
+                "subtitle": "Les meilleures crêpes de Suisse",
+                "nav": {
+                    "about": "À Propos",
+                    "menu": "Menu",
+                    "gallery": "Galerie",
+                    "contact": "Contact",
+                    "book": "Réservez Maintenant",
+                    "about_desc": "En savoir plus sur notre histoire",
+                    "menu_desc": "Découvrez nos spécialités",
+                    "gallery_desc": "Voir nos créations",
+                    "contact_desc": "Parlez-nous",
+                    "book_desc": "Réservez pour votre événement"
+                },
+                "home": "Accueil"
+            },
+            "es": {
+                "welcome": "Bienvenido a La Dolce Vita Creperia",
+                "subtitle": "Las mejores crêpes de Suiza",
+                "nav": {
+                    "about": "Sobre Nosotros",
+                    "menu": "Menú",
+                    "gallery": "Galería",
+                    "contact": "Contacto",
+                    "book": "Reserva Ahora",
+                    "about_desc": "Aprende más sobre nuestra historia",
+                    "menu_desc": "Descubre nuestras especialidades",
+                    "gallery_desc": "Mira nuestras creaciones",
+                    "contact_desc": "Habla con nosotros",
+                    "book_desc": "Reserva para tu evento"
+                },
+                "home": "Inicio"
+            },
+            "pt": {
+                "welcome": "Bem-vindo à La Dolce Vita Creperia",
+                "subtitle": "Os melhores Crêpes na Suíça",
+                "nav": {
+                    "about": "Sobre Nós",
+                    "menu": "Cardápio",
+                    "gallery": "Galeria",
+                    "contact": "Contato",
+                    "book": "Reserve Agora",
+                    "about_desc": "Saiba mais sobre a nossa história",
+                    "menu_desc": "Descubra nossas especialidades",
+                    "gallery_desc": "Veja nossas criações",
+                    "contact_desc": "Fale conosco",
+                    "book_desc": "Reserve para o seu evento"
+                },
+                "home": "Início"
+            },
+            "sq": {
+                "welcome": "Mirë se vini në La Dolce Vita Creperia",
+                "subtitle": "Krepat më të mira në Zvicër",
+                "nav": {
+                    "about": "Rreth Nesh",
+                    "menu": "Menu",
+                    "gallery": "Galeria",
+                    "contact": "Kontakt",
+                    "book": "Rezervo Tani",
+                    "about_desc": "Mësoni më shumë për historinë tonë",
+                    "menu_desc": "Zbuloni specialitetet tona",
+                    "gallery_desc": "Shikoni krijimet tona",
+                    "contact_desc": "Flini me ne",
+                    "book_desc": "Rezervoni për ngjarjen tuaj"
+                },
+                "home": "Ballina"
+            }
+        };
+
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            element.textContent = i18next.t(key);
         });
     }
 
-
-    window.onpageshow = function(event) {
-        if (event.persisted) {
-            document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
+    function toggleTranslateMenu() {
+        const el = document.getElementById("google_translate_element");
+        if (el.style.display === "block") {
+            el.style.display = "none";
+        } else {
+            el.style.display = "block";
         }
-    };
+    }
+
+    function toggleNav() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    }
+
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
+            }
+        };
     document.addEventListener('DOMContentLoaded', initializeAudio);
     </script>
 
