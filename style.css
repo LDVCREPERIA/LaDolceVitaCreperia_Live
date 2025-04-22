@@ -423,10 +423,50 @@ html, body {
 
 .contact-button i {
   margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.contact-button:hover i {
+  transform: scale(1.2);
 }
 
 .whatsapp {
   background-color: #25D366;
+}
+
+.phone-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.phone-link:hover {
+  color: #ff9c00;
+}
+
+.contact-info {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-info,
+  .contact-button {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .instagram {
