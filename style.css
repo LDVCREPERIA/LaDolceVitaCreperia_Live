@@ -1098,15 +1098,31 @@ body {
 .gallery-container {
     padding: 80px 20px 40px;
     max-width: 100%;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-container {
+        animation: none;
+        opacity: 1;
+    }
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
+    content-visibility: auto;
+}
+
+@supports not (content-visibility: auto) {
+    .gallery-grid {
+        contain: content;
+    }
 }
 
 .gallery-title {
