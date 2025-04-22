@@ -750,10 +750,48 @@ body {
     cursor: pointer;
     display: block;
     width: 100%;
+    max-width: 300px;
+    margin: 0.5rem auto;
     box-sizing: border-box;
     background: white;
     position: relative;
     z-index: 10;
+    backface-visibility: hidden;
+}
+
+.nav-button:hover, 
+.nav-button:focus {
+    background-color: #ff9c00;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    pointer-events: auto;
+}
+
+.hero {
+    padding-top: 64px;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #003366;
+    transition: background-color 0.3s ease;
+}
+
+.hero-logo {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
 }
 
 .nav-button:hover, .nav-button:active {

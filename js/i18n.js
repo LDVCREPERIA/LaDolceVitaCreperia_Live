@@ -11,12 +11,7 @@ function loadLocaleMessages(locale) {
 async function initI18n() {
   const resources = {
     de: { translation: await loadLocaleMessages('de') },
-    en: { translation: await loadLocaleMessages('en') },
-    fr: { translation: await loadLocaleMessages('fr') },
-    it: { translation: await loadLocaleMessages('it') },
-    es: { translation: await loadLocaleMessages('es') },
-    pt: { translation: await loadLocaleMessages('pt') },
-    sq: { translation: await loadLocaleMessages('sq') }
+    en: { translation: await loadLocaleMessages('en') }
   };
 
   await i18next
@@ -31,13 +26,15 @@ async function initI18n() {
     });
 
   updatePageContent();
+  updateLanguageSelector();
 }
 
 function updatePageContent() {
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
+    if (!key) return;
+    
     if (key.startsWith('[')) {
-      // Handle attribute translations
       const match = key.match(/\[(.*?)\](.*)/);
       if (match) {
         const attr = match[1];
@@ -45,13 +42,24 @@ function updatePageContent() {
         element.setAttribute(attr, i18next.t(k));
       }
     } else {
-      element.textContent = i18next.t(key);
+      const translation = i18next.t(key);
+      if (typeof translation === 'string') {
+        element.textContent = translation;
+      }
     }
   });
+}
+
+function updateLanguageSelector() {
+  const selector = document.querySelector('.language-selector select');
+  if (selector) {
+    selector.value = i18next.language;
+  }
 }
 
 function changeLanguage(lang) {
   i18next.changeLanguage(lang).then(() => {
     updatePageContent();
+    updateLanguageSelector();
   });
 }
