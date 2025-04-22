@@ -1813,20 +1813,57 @@ body {
     color: #ff9c00;
     text-decoration: none;
     font-size: 1.5rem;
-    padding: 1rem 2rem;
+    padding: 1.2rem;
     border: 2px solid #ff9c00;
-    border-radius: 8px;
-    text-align: center;
+    border-radius: 12px;
+    text-align: left;
     transition: all 0.3s ease;
     cursor: pointer;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     box-sizing: border-box;
     position: relative;
     z-index: 100;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     background: white;
     pointer-events: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-button .button-text {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.nav-button .button-description {
+    font-size: 0.9rem;
+    color: #666;
+    opacity: 0.9;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-color: #ff9c00;
+    outline: none;
+}
+
+.nav-button:hover .button-description,
+.nav-button:focus .button-description {
+    opacity: 1;
+    color: #ff9c00;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-button {
+        transition: none;
+    }
+    .nav-button:hover,
+    .nav-button:focus {
+        transform: none;
+    }
 }
 
 .swiper-button-next,

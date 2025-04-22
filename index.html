@@ -54,21 +54,60 @@
         </nav>
     </div>
 
-    <section class="hero">
-        <img src="hero-background.png" alt="La Dolce Vita Creperia" class="hero-logo">
-        <h1 data-i18n="welcome">Willkommen bei La Dolce Vita Creperia</h1>
-        <p data-i18n="subtitle">Die besten Crêpes in der Schweiz – ein authentisches italienisches Crêpes-Erlebnis</p>
-    </section>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content" role="main">
+        <section class="hero" aria-labelledby="welcome-heading">
+            <img src="hero-background.png" 
+                 alt="La Dolce Vita Creperia Logo" 
+                 class="hero-logo fade-in"
+                 width="800"
+                 height="400"
+                 loading="eager"
+                 decoding="async">
+            <h1 id="welcome-heading" data-i18n="welcome" class="animate-in" tabindex="0">Willkommen bei La Dolce Vita Creperia</h1>
+            <p data-i18n="subtitle" class="animate-in" style="animation-delay: 0.2s" tabindex="0">Die besten Crêpes in der Schweiz – ein authentisches italienisches Crêpes-Erlebnis</p>
+        </section>
 
-    <section class="main-navigation">
-        <nav class="nav-buttons">
-            <a href="ueber-uns.html" class="nav-button" data-translate="about" role="button">Über uns</a>
-            <a href="menu.html" class="nav-button" data-translate="menu" role="button">Menü</a>
-            <a href="gallery.html" class="nav-button" data-translate="gallery" role="button">Galerie</a>
-            <a href="booking.html" class="nav-button" data-translate="book" role="button">Book Us Now</a>
-            <a href="kontakt.html" class="nav-button" data-translate="contact" role="button">Kontakt Info</a>
-        </nav>
-    </section>
+        <section class="main-navigation" aria-label="Main Navigation">
+            <nav class="nav-buttons" role="navigation">
+                <a href="ueber-uns.html" 
+                   class="nav-button animate-in" 
+                   data-translate="about" 
+                   style="animation-delay: 0.3s">
+                    <span class="button-text">Über uns</span>
+                    <span class="button-description" data-i18n="nav.about_desc">Erfahren Sie mehr über unsere Geschichte</span>
+                </a>
+                <a href="menu.html" 
+                   class="nav-button animate-in" 
+                   data-translate="menu"
+                   style="animation-delay: 0.4s">
+                    <span class="button-text">Menü</span>
+                    <span class="button-description" data-i18n="nav.menu_desc">Entdecken Sie unsere Spezialitäten</span>
+                </a>
+                <a href="gallery.html" 
+                   class="nav-button animate-in" 
+                   data-translate="gallery"
+                   style="animation-delay: 0.5s">
+                    <span class="button-text">Galerie</span>
+                    <span class="button-description" data-i18n="nav.gallery_desc">Sehen Sie unsere Kreationen</span>
+                </a>
+                <a href="booking.html" 
+                   class="nav-button animate-in" 
+                   data-translate="book"
+                   style="animation-delay: 0.6s">
+                    <span class="button-text">Book Us Now</span>
+                    <span class="button-description" data-i18n="nav.book_desc">Reservieren Sie für Ihren Event</span>
+                </a>
+                <a href="kontakt.html" 
+                   class="nav-button animate-in" 
+                   data-translate="contact"
+                   style="animation-delay: 0.7s">
+                    <span class="button-text">Kontakt Info</span>
+                    <span class="button-description" data-i18n="nav.contact_desc">Sprechen Sie mit uns</span>
+                </a>
+            </nav>
+        </section>
+    </main>
 
     <div class="cta-section">
         <a href="booking.html" class="cta-button" data-translate="book">Jetzt buchen</a>
