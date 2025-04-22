@@ -42,5 +42,23 @@
   "contact": {
     "title": "Contact",
     "phone": "Phone"
+  },
+  "menu": {
+    "nutella": "Nutella Crêpe",
+    "nutella_desc": "The Classic – pure indulgence with creamy Nutella",
+    "coconut": "Coconut Crêpe",
+    "coconut_desc": "Tropical touch – Nutella meets fine coconut flakes",
+    "hazelnut": "Hazelnut Crêpe",
+    "hazelnut_desc": "For nut lovers – doubly nutty and irresistible",
+    "smarties": "Smarties Crêpe",
+    "smarties_desc": "Colorful & sweet – fun for everyone",
+    "kiwi": "Kiwi Crêpe",
+    "kiwi_desc": "Fruity-fresh with an extra kick",
+    "banana": "Banana Crêpe",
+    "banana_desc": "Soft, warm & chocolatey – a popular favorite",
+    "strawberry": "Strawberry Crêpe",
+    "strawberry_desc": "Fresh strawberries meet delicate sweetness",
+    "banana_strawberry": "Banana/Strawberry Crêpe",
+    "banana_strawberry_desc": "The best of both worlds – fruity & chocolatey"
   }
 }
