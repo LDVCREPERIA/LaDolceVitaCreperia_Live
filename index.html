@@ -203,105 +203,19 @@
                 const key = element.getAttribute('data-i18n');
                 element.textContent = i18next.t(key);
             });
-        });
-            "de": {
-                "welcome": "Willkommen bei La Dolce Vita Creperia",
-                "subtitle": "Die besten Crêpes in der Schweiz",
-                "about": "Über uns",
-                "menu": "Menü",
-                "gallery": "Galerie",
-                "contact": "Kontakt",
-                "book": "Jetzt buchen",
-                "home": "Startseite"
-            },
-            "en": {
-                "welcome": "Welcome to La Dolce Vita Creperia",
-                "subtitle": "The best Crêpes in Switzerland",
-                "about": "About Us",
-                "menu": "Menu",
-                "gallery": "Gallery",
-                "contact": "Contact",
-                "book": "Book Now",
-                "home": "Home"
-            },
-            "it": {
-                "welcome": "Benvenuti alla La Dolce Vita Creperia",
-                "subtitle": "Le migliori crêpes in Svizzera",
-                "about": "Chi Siamo",
-                "menu": "Menù",
-                "gallery": "Galleria",
-                "contact": "Contatto",
-                "book": "Prenota Ora",
-                "home": "Home"
-            },
-            "fr": {
-                "welcome": "Bienvenue à La Dolce Vita Creperia",
-                "subtitle": "Les meilleures crêpes de Suisse",
-                "about": "À Propos",
-                "menu": "Menu",
-                "gallery": "Galerie",
-                "contact": "Contact",
-                "book": "Réservez Maintenant",
-                "home": "Accueil"
-            },
-            "es": {
-                "welcome": "Bienvenido a La Dolce Vita Creperia",
-                "subtitle": "Las mejores crêpes de Suiza",
-                "about": "Sobre Nosotros",
-                "menu": "Menú",
-                "gallery": "Galería",
-                "contact": "Contacto",
-                "book": "Reserva Ahora",
-                "home": "Inicio"
-            },
-            "pt": {
-                "welcome": "Bem-vindo à La Dolce Vita Creperia",
-                "subtitle": "Os melhores Crêpes na Suíça",
-                "about": "Sobre Nós",
-                "menu": "Cardápio",
-                "gallery": "Galeria",
-                "contact": "Contato",
-                "book": "Reserve Agora",
-                "home": "Início"
-            },
-            "sq": {
-                "welcome": "Mirë se vini në La Dolce Vita Creperia",
-                "subtitle": "Krepat më të mira në Zvicër",
-                "about": "Rreth Nesh",
-                "menu": "Menu",
-                "gallery": "Galeria",
-                "contact": "Kontakt",
-                "book": "Rezervo Tani",
-                "home": "Ballina"
-            }
-        };
-
-        document.querySelectorAll('[data-translate]').forEach(element => {
-            const key = element.dataset.translate;
-            if (translations[lang][key]) {
-                element.textContent = translations[lang][key];
-            }
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.dataset.translate;
+                element.textContent = i18next.t(key);
+            });
         });
     }
 
-    function toggleTranslateMenu() {
-        const el = document.getElementById("google_translate_element");
-        if (el.style.display === "block") {
-            el.style.display = "none";
-        } else {
-            el.style.display = "block";
+
+    window.onpageshow = function(event) {
+        if (event.persisted) {
+            document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
         }
-    }
-
-    function toggleNav() {
-        document.querySelector('.nav-menu').classList.toggle('active');
-    }
-
-        window.onpageshow = function(event) {
-            if (event.persisted) {
-                document.querySelector('link[href="style.css"]').setAttribute('href', 'style.css?' + Date.now());
-            }
-        };
+    };
     document.addEventListener('DOMContentLoaded', initializeAudio);
     </script>
 
