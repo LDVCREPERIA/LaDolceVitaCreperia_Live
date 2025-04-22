@@ -1,4 +1,35 @@
 
+async function initI18n() {
+  const languages = ['de', 'en', 'it', 'fr', 'es', 'pt', 'sq'];
+  const resources = {};
+  
+  for (const lang of languages) {
+    try {
+      const response = await fetch(`/locales/${lang}.json`);
+      resources[lang] = {
+        translation: await response.json()
+      };
+    } catch (error) {
+      console.warn(`Failed to load ${lang} translations:`, error);
+    }
+  }
+
+  await i18next
+    .use(i18nextBrowserLanguageDetector)
+    .init({
+      resources,
+      fallbackLng: 'de',
+      lng: 'de', // Set default language to German
+      debug: false,
+      interpolation: {
+        escapeValue: false
+      }
+    });
+
+  updatePageContent();
+  updateLanguageSelector();
+}
+
 function loadLocaleMessages(locale) {
   return fetch(`/locales/${locale}.json`)
     .then(response => response.json())

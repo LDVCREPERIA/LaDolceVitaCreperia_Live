@@ -41,7 +41,8 @@
   },
   "contact": {
     "title": "Contact",
-    "phone": "Phone"
+    "phone": "Phone",
+    "intro": "We look forward to hearing from you! Feel free to contact us for questions, bookings, or more information."
   },
   "menu": {
     "subtitle": "Discover our delicious creations",
