@@ -11,7 +11,12 @@ function loadLocaleMessages(locale) {
 async function initI18n() {
   const resources = {
     de: { translation: await loadLocaleMessages('de') },
-    en: { translation: await loadLocaleMessages('en') }
+    en: { translation: await loadLocaleMessages('en') },
+    fr: { translation: await loadLocaleMessages('fr') },
+    it: { translation: await loadLocaleMessages('it') },
+    es: { translation: await loadLocaleMessages('es') },
+    pt: { translation: await loadLocaleMessages('pt') },
+    sq: { translation: await loadLocaleMessages('sq') }
   };
 
   await i18next
@@ -25,23 +30,28 @@ async function initI18n() {
       }
     });
 
+  updatePageContent();
+}
+
+function updatePageContent() {
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
-    element.textContent = i18next.t(key);
+    if (key.startsWith('[')) {
+      // Handle attribute translations
+      const match = key.match(/\[(.*?)\](.*)/);
+      if (match) {
+        const attr = match[1];
+        const k = match[2];
+        element.setAttribute(attr, i18next.t(k));
+      }
+    } else {
+      element.textContent = i18next.t(key);
+    }
   });
-
-  // Update language selector
-  const langSelector = document.querySelector('.language-selector select');
-  if (langSelector) {
-    langSelector.value = i18next.language;
-  }
 }
 
 function changeLanguage(lang) {
   i18next.changeLanguage(lang).then(() => {
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-      const key = element.getAttribute('data-i18n');
-      element.textContent = i18next.t(key);
-    });
+    updatePageContent();
   });
 }
