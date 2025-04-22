@@ -1,0 +1,25 @@
+
+{
+  "welcome": "Willkommen bei La Dolce Vita Creperia",
+  "subtitle": "Die besten Crêpes in der Schweiz – ein authentisches italienisches Crêpes-Erlebnis",
+  "home": "Startseite",
+  "about": "Über uns",
+  "menu": "Menü",
+  "gallery": "Galerie",
+  "book_now": "Jetzt buchen",
+  "contact": "Kontakt",
+  "music_label": "Klicken für Musik",
+  "our_menu": "Unser Menü",
+  "thank_you": "Vielen Dank für Ihre Anfrage!",
+  "thank_you_message": "Wir melden uns bald, um alle Details mit Ihnen zu besprechen.",
+  "back_to_home": "Zurück zur Startseite",
+  "booking_request": "Buchungsanfrage",
+  "form_intro": "Füllen Sie unser Buchungsformular aus und wir melden uns schnellstmöglich bei Ihnen.",
+  "name": "Name",
+  "phone": "Telefon",
+  "city": "Stadt",
+  "event_type": "Art der Veranstaltung",
+  "guests": "Anzahl der Gäste",
+  "date": "Wunschtermin",
+  "send_request": "Anfrage senden"
+}

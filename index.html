@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Dolce Vita Creperia</title>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="swipe-navigation.js"></script>
 
     <link rel="stylesheet" href="style.css">
@@ -54,8 +57,8 @@
 
     <section class="hero">
         <img src="hero-background.png" alt="La Dolce Vita Creperia" class="hero-logo">
-        <h1 data-translate="welcome">Willkommen bei La Dolce Vita Creperia</h1>
-        <p data-translate="subtitle">Die besten Crêpes in der Schweiz – ein authentisches italienisches Crêpes-Erlebnis</p>
+        <h1 data-i18n="welcome">Willkommen bei La Dolce Vita Creperia</h1>
+        <p data-i18n="subtitle">Die besten Crêpes in der Schweiz – ein authentisches italienisches Crêpes-Erlebnis</p>
     </section>
 
     <section class="main-navigation">
@@ -120,8 +123,15 @@
         }
     }
 
+    document.addEventListener('DOMContentLoaded', initI18n);
+    
     function changeLanguage(lang) {
-        const translations = {
+        i18next.changeLanguage(lang).then(() => {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = i18next.t(key);
+            });
+        });
             "de": {
                 "welcome": "Willkommen bei La Dolce Vita Creperia",
                 "subtitle": "Die besten Crêpes in der Schweiz",
