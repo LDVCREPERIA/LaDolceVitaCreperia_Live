@@ -50,6 +50,7 @@ async function initI18n() {
     .init({
       resources,
       fallbackLng: 'de',
+      lng: 'de', // Force German as default
       debug: false,
       interpolation: {
         escapeValue: false
